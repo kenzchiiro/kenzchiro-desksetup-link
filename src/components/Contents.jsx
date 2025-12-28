@@ -1,0 +1,132 @@
+import React, { useMemo, useState } from 'react'
+import './Contents.css'
+
+// Example data; replace with real data or props as needed
+const ITEMS = [
+  { id: 1, title: 'Pink Keyboard', category: 'keyboard', img: '/src/assets/cover.jpg', description: 'Custom pink mechanical keyboard with PBT keycaps and hot-swappable switches.', code: 'PINK10' },
+  { id: 2, title: 'Cute Speaker', category: 'speaker', img: '/src/assets/cover.jpg' },
+  { id: 3, title: 'Mousepad', category: 'mousepad', img: '/src/assets/cover.jpg' },
+  { id: 4, title: 'Ghibli Figure', category: 'figure', img: '/src/assets/cover.jpg' },
+  { id: 5, title: 'Desk Setup', category: 'desk setup', img: '/src/assets/cover.jpg' },
+  { id: 6, title: 'Case', category: 'case', img: '/src/assets/cover.jpg' },
+]
+
+export default function Contents() {
+  const [query, setQuery] = useState('')
+  const [active, setActive] = useState('all')
+  const [modalOpen, setModalOpen] = useState(false)
+  const [modalItem, setModalItem] = useState(null)
+  const [copied, setCopied] = useState(false)
+
+  const copyCode = async (code) => {
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(code)
+      } else {
+        const ta = document.createElement('textarea')
+        ta.value = code
+        document.body.appendChild(ta)
+        ta.select()
+        document.execCommand('copy')
+        document.body.removeChild(ta)
+      }
+      setCopied(true)
+      setTimeout(() => setCopied(false), 1500)
+    } catch (e) {
+      console.warn('copy failed', e)
+    }
+  }
+
+  const categories = useMemo(() => {
+    const set = new Set(ITEMS.map((i) => i.category))
+    return ['all', ...Array.from(set)]
+  }, [])
+
+  const filtered = useMemo(() => {
+    const q = query.trim().toLowerCase()
+    return ITEMS.filter((it) => {
+      if (active !== 'all' && it.category !== active) return false
+      if (!q) return true
+      return it.title.toLowerCase().includes(q) || it.category.toLowerCase().includes(q)
+    })
+  }, [query, active])
+
+  return (
+    <section className="contents-root">
+      <div className="contents-controls">
+        <div className="search-wrapper">
+          <svg className="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="6"/><path d="M21 21l-4.3-4.3"/></svg>
+          <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search" />
+        </div>
+
+        <div className="chips">
+          {categories.map((c) => (
+            <button
+              key={c}
+              className={`chip ${active === c ? 'active' : ''}`}
+              onClick={() => setActive(c)}
+            >
+              {c}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="grid">
+        {filtered.map((item) => (
+          <article key={item.id} className="card" onClick={() => { setModalItem(item); setModalOpen(true) }}>
+            <div className="card-media">
+              <img src={item.img} alt={item.title} />
+            </div>
+            {/* <div className="card-body">
+              <h3>{item.title}</h3>
+              <p className="cat">{item.category}</p>
+            </div> */}
+          </article>
+        ))}
+      </div>
+
+      {modalOpen && modalItem && (
+        <div className="modal-backdrop" onClick={() => setModalOpen(false)}>
+          <div className="modal modal-flat" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={() => setModalOpen(false)} aria-label="Close">×</button>
+            <h2 className="modal-title">{modalItem.title}</h2>
+
+            {modalItem.description && <p className="modal-desc">{modalItem.description}</p>}
+            <br/>
+
+            {modalItem.code && (
+              <div className="modal-code">
+                <div className="code-label">Discount code</div>
+                <div className="code-row">
+                  <div className="code-box">{modalItem.code}</div>
+                  <button className={`copy-btn ${copied ? 'copied' : ''}`} onClick={(e) => { e.stopPropagation(); copyCode(modalItem.code) }} aria-label="Copy code">{copied ? 'COPIED' : 'COPY'}</button>
+                </div>
+              </div>
+            )}
+                        <br/>
+
+            <p className="modal-sub">Order the way that’s easiest for you.</p>
+
+            <div className="channel-grid">
+              <a className="channel" href={`https://shopee.co.th/search?keyword=${encodeURIComponent(modalItem.title)}`} target="_blank" rel="noreferrer" onClick={() => setModalOpen(false)}>
+                <div className="ch-icon shopee">🛍️</div>
+                <div className="ch-label">Shopee</div>
+              </a>
+
+              <a className="channel" href={`https://www.tiktok.com/search?q=${encodeURIComponent(modalItem.title)}`} target="_blank" rel="noreferrer" onClick={() => setModalOpen(false)}>
+                <div className="ch-icon tiktok">🎵</div>
+                <div className="ch-label">TikTok</div>
+              </a>
+
+              <a className="channel" href={`https://www.lazada.co.th/catalog/?q=${encodeURIComponent(modalItem.title)}`} target="_blank" rel="noreferrer" onClick={() => setModalOpen(false)}>
+                <div className="ch-icon lazada">💜</div>
+                <div className="ch-label">Lazada</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+    </section>
+  )
+}

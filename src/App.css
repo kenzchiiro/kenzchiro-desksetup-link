@@ -1,0 +1,83 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* page background */
+body{background:#fff;color:inherit}
+.root{}
+/* design tokens */
+:root{
+  --bg: #ffffff;
+  --text: #111827; /* primary text - dark */
+  --muted: #6b7280; /* secondary / muted text */
+  --subtle: #9ca3af; /* subtle icons/placeholders */
+  --accent: #ff6a2a;
+  --success: #0a7a2a;
+  --success-bg: #e6ffed;
+}
+
+/* consistent container used by header and content components */
+.container{max-width:900px;margin:0 auto;padding:0 18px}
+
+/* shared card wrapper for header + contents */
+.app-card{background:#fff;border-radius:36px;box-shadow:0 6px 18px rgba(10,10,20,0.08);overflow:hidden;margin:60px auto 60px}
+
+@media (max-width:480px){
+  .app-card{
+    width:100vw;
+    margin-left:calc(50% - 50vw);
+    margin-right:calc(50% - 50vw);
+    margin-top:0;
+    margin-bottom:0;
+    border-radius:0;
+    overflow:hidden;
+  }
+  /* when element also has .container, remove its horizontal padding for full-bleed */
+  .app-card.container{padding:0}
+}
+
+.layout {
+  /* padding: 0 0 0 0; */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #fff;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}

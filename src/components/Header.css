@@ -1,0 +1,150 @@
+.profile-header{
+  padding-top: 18px;
+  background:transparent;
+  border-radius:0;
+  box-shadow:none;
+  overflow:visible;
+  position:relative;
+}
+.cover{
+  height:512px;
+  border-radius:18px 18px 0 0;
+  background:linear-gradient(90deg,#ffd66b 0%,#ffb6c1 50%, #ffd66b 100%);
+  background-size:cover;
+  background-position:center;
+  position:relative;
+}
+.cover::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:140px;
+  pointer-events:none;
+  background:linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 70%);
+}
+.header-content{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding: 0 24px 28px 24px;
+  position:relative;
+}
+.avatar-column{
+  width:auto;
+  display:flex;
+  justify-content:center;
+  margin-top:-76px;
+}
+.avatar-wrap{
+  background:transparent;
+  padding:6px;
+  border-radius:999px;
+}
+.avatar{
+  width:96px;
+  height:96px;
+  border-radius:50%;
+  object-fit:cover;
+  border:6px solid #fff;
+  box-shadow:0 6px 18px rgba(10,10,20,0.08);
+}
+.main-column{
+  flex:0 0 auto;
+  width:100%;
+  max-width:720px;
+  padding:8px 20px 0 20px;
+  text-align:center;
+}
+.profile-info{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  align-items:center;
+}
+.display-name{
+  color: var(--muted);
+  margin:0;
+  font-size:24px;
+}
+.email{
+  margin:0;
+  color:var(--muted);
+  font-size:14px;
+}
+.socials{
+  margin-top:8px;
+  display:flex;
+  gap:12px;
+  justify-content:center;
+}
+.social{
+  display:inline-flex;
+  width:36px;
+  height:36px;
+  align-items:center;
+  justify-content:center;
+  color:var(--text);
+  background:transparent;
+  border-radius:10px;
+}
+.social svg{width:18px;height:18px}
+.social img,.social-icon{width:18px;height:18px;display:block}
+.search-wrap{margin-top:18px; display:flex; justify-content:center}
+.search-input{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  background:#fbfbfb;
+  border-radius:999px;
+  padding:10px 14px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.6);
+  border:1px solid rgba(0,0,0,0.05);
+  max-width:600px;
+}
+.search-input input{
+  border:0;
+  outline:none;
+  background:transparent;
+  font-size:16px;
+  flex:1;
+}
+.icon-search{width:20px;height:20px;color:var(--subtle)}
+
+@media (max-width:640px){
+  .header-content{flex-direction:column;align-items:center;padding:0 14px 20px}
+  .avatar-column{margin-top:-60px}
+  .main-column{padding:10px 0 0}
+  .search-input{max-width:100%}
+}
+
+/* Mobile full-bleed layout */
+@media (max-width:480px){
+  .profile-header{
+    /* make full-bleed regardless of parent container padding */
+    max-width:none;
+    width:100vw;
+    margin-left:calc(50% - 50vw);
+    margin-right:calc(50% - 50vw);
+    padding-top:0;
+    border-radius:0;
+    box-shadow:none;
+  }
+  .cover{
+    height:512px;
+    border-radius:0;
+  }
+  .cover::after{
+    border-bottom-left-radius:0;
+    border-bottom-right-radius:0;
+    height:160px;
+  }
+  .header-content{padding:0 24px 20px}
+  .avatar-column{margin-top:-70px}
+  .avatar{width:88px;height:88px;border-width:5px}
+  .display-name{font-size:20px}
+  .main-column{padding-top:4px}
+  .search-input{width:100%;max-width:520px;margin:12px auto}
+}
+/* keep mobile full-bleed rules above; wrapper handles desktop card styles */
