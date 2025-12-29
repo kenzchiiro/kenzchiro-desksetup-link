@@ -1,16 +1,15 @@
 import React from 'react'
 import './Header.css'
-import avatar from '../assets/avatar.jpg'
-import cover from '../assets/cover.jpg'
-import emailIcon from '../assets/icon-email.png'
-import facebookIcon from '../assets/icon-facebook.png'
-import tiktokIcon from '../assets/icon-tiktok.png'
-import instagramIcon from '../assets/icon-instagram.png'
+import contactsData from '../data/contacts.json'
+import profileData from '../data/profile.json'
 
 export default function Header() {
+  const contacts = contactsData.contacts
+  const profile = profileData
+
   return (
     <header className="profile-header">
-      <div className="cover" aria-hidden="true" style={{backgroundImage:`url(${cover})`, backgroundSize: 'cover', backgroundPosition: 'center'}}></div>
+      <div className="cover" aria-hidden="true" style={{backgroundImage:`url(${profile.cover})`, backgroundSize: 'cover', backgroundPosition: 'center'}}></div>
 
       <div className="header-content">
         <div className="avatar-column">
@@ -18,31 +17,38 @@ export default function Header() {
             <img
               className="avatar"
               alt="avatar"
-              src={avatar}
+              src={profile.avatar}
             />
           </div>
         </div>
 
         <div className="main-column">
           <div className="profile-info">
-            <h1 className="display-name">kenzchiro 🪴</h1>
-            <p className="email">🖥️ Desk setup • 🎧 Gadgets • 🎮 Gaming</p>
+            <h1 className="display-name">{profile.displayName}</h1>
+            <p className="email">{profile.bio}</p>
             <div className="socials" aria-label="social links">
-              <a className="social" href="#" aria-label="YouTube">
-                <img src={emailIcon} alt="email" className="social-icon" />
-              </a>
-              <a className="social" href="#" aria-label="Pinterest">
-                <img src={facebookIcon} alt="facebook" className="social-icon" />
-              </a>
-              <a className="social" href="#" aria-label="TikTok">
-                <img src={tiktokIcon} alt="tiktok" className="social-icon" />
-              </a>
-              <a className="social" href="#" aria-label="Instagram">
-                <img src={instagramIcon} alt="instagram" className="social-icon" />
-              </a>
+              {profile.socials.map((social) => (
+                <a key={social.id} className="social" href={social.url} aria-label={social.ariaLabel}>
+                  <img src={social.icon} alt={social.name} className="social-icon" />
+                </a>
+              ))}
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="contact-cards">
+        {contacts.map((contact) => (
+          <a key={contact.id} className="contact-card" href={contact.url} role="button">
+            <div className={`contact-icon ${contact.icon}`}>
+              <img src={`/src/assets/icon-${contact.icon}.svg`} alt={contact.icon} />
+            </div>
+            <div className="contact-body">
+              <div className="contact-title">{contact.title}</div>
+              <div className="contact-sub">{contact.subtitle}</div>
+            </div>
+          </a>
+        ))}
       </div>
     </header>
   )

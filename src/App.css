@@ -19,12 +19,13 @@ body{background:#fff;color:inherit}
 }
 
 /* consistent container used by header and content components */
-.container{max-width:900px;margin:0 auto;padding:0 18px}
+.container{max-width:900px;margin:0 auto;padding:0 20px}
 
 /* shared card wrapper for header + contents */
 .app-card{background:#fff;border-radius:36px;box-shadow:0 6px 18px rgba(10,10,20,0.08);overflow:hidden;margin:60px auto 60px}
 
 @media (max-width:480px){
+  .container{padding:0 16px}
   .app-card{
     width:100vw;
     margin-left:calc(50% - 50vw);

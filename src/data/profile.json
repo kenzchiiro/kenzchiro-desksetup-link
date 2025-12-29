@@ -1,0 +1,36 @@
+{
+  "displayName": "kenzchiro 🪴",
+  "bio": "🖥️ Desk setup • 🎧 Gadgets • 🎮 Gaming",
+  "avatar": "/src/assets/avatar.jpg",
+  "cover": "/src/assets/cover.jpg",
+  "socials": [
+    {
+      "id": 1,
+      "name": "tiktok",
+      "icon": "/src/assets/icon-sm-tiktok.svg",
+      "url": "#",
+      "ariaLabel": "TikTok"
+    },
+    {
+      "id": 2,
+      "name": "instagram",
+      "icon": "/src/assets/icon-sm-instagram.svg",
+      "url": "#",
+      "ariaLabel": "Instagram"
+    },
+    {
+      "id": 3,
+      "name": "email",
+      "icon": "/src/assets/icon-sm-email.svg",
+      "url": "#",
+      "ariaLabel": "Email"
+    },
+    {
+      "id": 4,
+      "name": "facebook",
+      "icon": "/src/assets/icon-sm-facebook.svg",
+      "url": "#",
+      "ariaLabel": "Facebook"
+    }
+  ]
+}

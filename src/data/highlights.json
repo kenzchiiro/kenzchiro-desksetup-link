@@ -1,0 +1,32 @@
+{
+  "highlights": [
+    {
+      "title": "Parametric",
+      "subtitle": "Womier Keycap Set",
+      "img": "/src/assets/cover.jpg",
+      "tag": "WOMIER-KEYCAP SET",
+      "description": "112-key | cherry profile | metallic coating"
+    },
+    {
+      "title": "Torfas - Ostand Q3 Air",
+      "subtitle": "",
+      "img": "/src/assets/cover.jpg",
+      "tag": "",
+      "description": ""
+    },
+    {
+      "title": "ชิ้นวางได้จอ",
+      "subtitle": "",
+      "img": "/src/assets/cover.jpg",
+      "tag": "",
+      "description": ""
+    },
+        {
+      "title": "ชิ้นวางได้จอ",
+      "subtitle": "",
+      "img": "/src/assets/cover.jpg",
+      "tag": "",
+      "description": ""
+    }
+  ]
+}

@@ -1,15 +1,6 @@
 import React, { useMemo, useState } from 'react'
 import './Contents.css'
-
-// Example data; replace with real data or props as needed
-const ITEMS = [
-  { id: 1, title: 'Pink Keyboard', category: 'keyboard', img: '/src/assets/cover.jpg', description: 'Custom pink mechanical keyboard with PBT keycaps and hot-swappable switches.', code: 'PINK10' },
-  { id: 2, title: 'Cute Speaker', category: 'speaker', img: '/src/assets/cover.jpg' },
-  { id: 3, title: 'Mousepad', category: 'mousepad', img: '/src/assets/cover.jpg' },
-  { id: 4, title: 'Ghibli Figure', category: 'figure', img: '/src/assets/cover.jpg' },
-  { id: 5, title: 'Desk Setup', category: 'desk setup', img: '/src/assets/cover.jpg' },
-  { id: 6, title: 'Case', category: 'case', img: '/src/assets/cover.jpg' },
-]
+import itemsData from '../data/items.json'
 
 export default function Contents() {
   const [query, setQuery] = useState('')
@@ -17,6 +8,8 @@ export default function Contents() {
   const [modalOpen, setModalOpen] = useState(false)
   const [modalItem, setModalItem] = useState(null)
   const [copied, setCopied] = useState(false)
+
+  const ITEMS = itemsData.items
 
   const copyCode = async (code) => {
     try {
@@ -51,6 +44,17 @@ export default function Contents() {
     })
   }, [query, active])
 
+  const groupedByCategory = useMemo(() => {
+    const groups = {}
+    filtered.forEach((item) => {
+      if (!groups[item.category]) {
+        groups[item.category] = []
+      }
+      groups[item.category].push(item)
+    })
+    return groups
+  }, [filtered])
+
   return (
     <section className="contents-root">
       <div className="contents-controls">
@@ -72,17 +76,24 @@ export default function Contents() {
         </div>
       </div>
 
-      <div className="grid">
-        {filtered.map((item) => (
-          <article key={item.id} className="card" onClick={() => { setModalItem(item); setModalOpen(true) }}>
-            <div className="card-media">
-              <img src={item.img} alt={item.title} />
+      <div className="category-sections">
+        {Object.entries(groupedByCategory).map(([category, items]) => (
+          <div key={category} className="category-section">
+            <h2 className="category-title">{category}</h2>
+            <div className="grid">
+              {items.map((item, index) => (
+                <article key={`${category}-${index}`} className="card" onClick={() => { setModalItem(item); setModalOpen(true) }}>
+                  <div className="card-media">
+                    <img src={item.img} alt={item.title} />
+                  </div>
+                  {/* <div className="card-body">
+                    <h3>{item.title}</h3>
+                    <p className="cat">{item.category}</p>
+                  </div> */}
+                </article>
+              ))}
             </div>
-            {/* <div className="card-body">
-              <h3>{item.title}</h3>
-              <p className="cat">{item.category}</p>
-            </div> */}
-          </article>
+          </div>
         ))}
       </div>
 
@@ -109,20 +120,33 @@ export default function Contents() {
             <p className="modal-sub">Order the way that’s easiest for you.</p>
 
             <div className="channel-grid">
-              <a className="channel" href={`https://shopee.co.th/search?keyword=${encodeURIComponent(modalItem.title)}`} target="_blank" rel="noreferrer" onClick={() => setModalOpen(false)}>
-                <div className="ch-icon shopee">🛍️</div>
+              <a className="channel" href={modalItem.links?.shopee || `https://shopee.co.th/search?keyword=${encodeURIComponent(modalItem.title)}`} target="_blank" rel="noreferrer" onClick={() => setModalOpen(false)}>
+                <div className="ch-icon shopee">
+                  <img src="/src/assets/icon-shopee.svg" alt="Shopee" />
+                </div>
                 <div className="ch-label">Shopee</div>
               </a>
 
-              <a className="channel" href={`https://www.tiktok.com/search?q=${encodeURIComponent(modalItem.title)}`} target="_blank" rel="noreferrer" onClick={() => setModalOpen(false)}>
-                <div className="ch-icon tiktok">🎵</div>
+              <a className="channel" href={modalItem.links?.tiktok || `https://www.tiktok.com/search?q=${encodeURIComponent(modalItem.title)}`} target="_blank" rel="noreferrer" onClick={() => setModalOpen(false)}>
+                <div className="ch-icon tiktok">
+                  <img src="/src/assets/icon-tiktok.svg" alt="TikTok" />
+                </div>
                 <div className="ch-label">TikTok</div>
               </a>
 
-              <a className="channel" href={`https://www.lazada.co.th/catalog/?q=${encodeURIComponent(modalItem.title)}`} target="_blank" rel="noreferrer" onClick={() => setModalOpen(false)}>
-                <div className="ch-icon lazada">💜</div>
+              <a className="channel" href={modalItem.links?.lazada || `https://www.lazada.co.th/catalog/?q=${encodeURIComponent(modalItem.title)}`} target="_blank" rel="noreferrer" onClick={() => setModalOpen(false)}>
+                <div className="ch-icon lazada">
+                  <img src="/src/assets/icon-lazada.svg" alt="Lazada" />
+                </div>
                 <div className="ch-label">Lazada</div>
               </a>
+
+              {modalItem.links?.other && (
+                <a className="channel" href={modalItem.links.other} target="_blank" rel="noreferrer" onClick={() => setModalOpen(false)}>
+                  <div className="ch-icon other">🔗</div>
+                  <div className="ch-label">Other</div>
+                </a>
+              )}
             </div>
           </div>
         </div>

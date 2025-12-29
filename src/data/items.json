@@ -1,0 +1,111 @@
+{
+  "items": [
+    {
+      "title": "Pink Keyboard",
+      "category": "keyboard",
+      "img": "/src/assets/cover.jpg",
+      "description": "Custom pink mechanical keyboard with PBT keycaps and hot-swappable switches.",
+      "code": "PINK10",
+      "links": {
+        "shopee": "https://shopee.co.th/product/123456",
+        "tiktok": "https://www.tiktok.com/@kenzchiro",
+        "lazada": "https://www.lazada.co.th/products/123456",
+        "other": ""
+      }
+    },
+    {
+      "title": "Pink Keyboard 2",
+      "category": "keyboard",
+      "img": "/src/assets/cover.jpg",
+      "description": "Custom pink mechanical keyboard with PBT keycaps and hot-swappable switches.",
+      "code": "PINK10",
+      "links": {
+        "shopee": "",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "Cute Speaker",
+      "category": "speaker",
+      "img": "/src/assets/cover.jpg",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "Mousepad",
+      "category": "mousepad",
+      "img": "/src/assets/cover.jpg",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "Ghibli Figure",
+      "category": "figure",
+      "img": "/src/assets/cover.jpg",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "Desk Setup",
+      "category": "desk setup",
+      "img": "/src/assets/cover.jpg",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "Case",
+      "category": "case",
+      "img": "/src/assets/cover.jpg",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    }
+  ],
+  "contacts": [
+    {
+      "id": 1,
+      "title": "Contact for work",
+      "subtitle": "ติดต่องาน",
+      "icon": "line",
+      "url": "#"
+    },
+    {
+      "id": 2,
+      "title": "@kenzchiro",
+      "subtitle": "Shopee VDO - อย่าลืมเก็บโค้ตก่อนนะ",
+      "icon": "shopee",
+      "url": "#"
+    }
+  ]
+}
