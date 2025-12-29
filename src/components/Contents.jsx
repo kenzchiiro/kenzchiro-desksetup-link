@@ -143,7 +143,9 @@ export default function Contents() {
 
               {modalItem.links?.other && (
                 <a className="channel" href={modalItem.links.other} target="_blank" rel="noreferrer" onClick={() => setModalOpen(false)}>
-                  <div className="ch-icon other">🔗</div>
+                  <div className="ch-icon other">
+                  <img src="/src/assets/icon-external-link.svg" alt="Other" />
+                  </div>
                   <div className="ch-label">Other</div>
                 </a>
               )}
