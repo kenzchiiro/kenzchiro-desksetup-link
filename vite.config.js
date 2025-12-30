@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/kenzchiro-desksetup-link/',
+  base: '/',
   plugins: [
     react(),
     tailwindcss()],
