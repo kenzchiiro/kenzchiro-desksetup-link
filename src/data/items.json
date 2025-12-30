@@ -1,21 +1,23 @@
 {
   "items": [
     {
-      "title": "Baraccuda",
+      "title": "Barracuda - Phantom White",
       "category": "razer",
-      "img": "/src/assets/products/razer-barracuda.jpg",
+      "brand": "razer",
+      "img": "/src/assets/products/razer-barracuda.png",
       "description": "Wireless gaming headset with THX Spatial Audio and hybrid ANC for immersive sound.",
       "code": "",
       "links": {
         "shopee": "https://s.shopee.co.th/30fsbEEnEC",
-        "tiktok": "",
-        "lazada": "",
+        "tiktok": "https://s.shopee.co.th/30fsbEEnEC",
+        "lazada": "https://s.shopee.co.th/30fsbEEnEC",
         "other": ""
       }
     },
     {
-      "title": "Firefly V2",
+      "title": "Firefly V2 - Phantom White",
       "category": "razer",
+      "brand": "razer",
       "img": "/src/assets/products/razer-firefly-v2.jpg",
       "description": "Hard gaming mouse mat with customizable Chroma RGB lighting across 19 zones.",
       "code": "",
@@ -27,9 +29,10 @@
       }
     },
     {
-      "title": "Basilisk V3 Pro",
+      "title": "Basilisk V3 Pro - Phantom White",
       "category": "razer",
-      "img": "/src/assets/products/razer-basilisk-v3-pro.jpg",
+      "brand": "razer",
+      "img": "/src/assets/products/razer-basilisk-v3-pro.png",
       "description": "Wireless gaming mouse with 30K DPI sensor, 13 programmable buttons, and Razer Chroma RGB.",
       "code": "",
       "links": {
@@ -40,8 +43,9 @@
       }
     },
     {
-      "title": "Black Widow V4",
+      "title": "Black Widow V4 - Phantom White",
       "category": "razer",
+      "brand": "razer",
       "img": "/src/assets/products/razer-black-widow-v4.jpg",
       "description": "Mechanical gaming keyboard with Razer Green switches, command dial, and per-key RGB lighting.",
       "code": "",
@@ -53,22 +57,123 @@
       }
     },
     {
-      "title": "Pink Keyboard 2",
+      "title": "Womier ERA75",
       "category": "keyboard",
-      "img": "/src/assets/cover.jpg",
-      "description": "Custom pink mechanical keyboard with PBT keycaps and hot-swappable switches.",
-      "code": "PINK101",
+      "brand": "womier",
+      "img": "/src/assets/products/womier-era75.jpg",
+      "description": "[Womier] 75% mechanical keyboard kit | hot-swappable | gasket mount",
+      "code": "",
       "links": {
         "shopee": "",
+        "tiktok": "",
+        "lazada": "",
+        "other": "https://womierkeyboard.com/products/womier-era75?sca_ref=10149033.MaOc1663RR"
+      }
+    },
+    {
+      "title": "Ergonoz KB01",
+      "category": "keyboard",
+      "brand": "ergonoz",
+      "img": "/src/assets/products/ergonoz-kb01.png",
+      "description": "Ergonoz Keyboard Kb01 Is a 2-System Wireless Keyboard That Supports Both 2.4Ghz and Bluetooth.",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/7KpG6XQ4KR",
+        "tiktok": "https://vt.tiktok.com/ZSHE18R4VYk5S-03YDL/",
+        "lazada": "https://s.lazada.co.th/s.ZbjyUb",
+        "other": ""
+      }
+    },
+    {
+      "title": "Gconic A75 Pro",
+      "category": "keyboard",
+      "brand": "gconic",
+      "img": "/src/assets/products/gconic-a75-pro.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/1LXvt3QGIg",
+        "tiktok": "",
+        "lazada": "https://s.lazada.co.th/s.ZbjBgw",
+        "other": ""
+      }
+    },
+        {
+      "id": 8,
+      "title": "Gconic A98 Pro",
+      "category": "keyboard",
+      "brand": "gconic",
+      "img": "/src/assets/products/gconic-a98-pro.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/5ffE7IeBeb",
         "tiktok": "",
         "lazada": "",
         "other": ""
       }
     },
     {
-      "title": "Cute Speaker",
-      "category": "speaker",
-      "img": "/src/assets/cover.jpg",
+      "title": "Ajazz NK68",
+      "category": "keyboard",
+      "brand": "ajazz",
+      "img": "/src/assets/products/ajazz-nk68.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/7fTBKcTkXU",
+        "tiktok": "https://vt.tiktok.com/ZSHctV9VqXm5B-novoI/",
+        "lazada": "https://s.lazada.co.th/s.ZbjzbZ",
+        "other": ""
+      }
+    },
+    {
+      "title": "Ajazz NK61",
+      "category": "keyboard",
+      "brand": "ajazz",
+      "img": "/src/assets/products/ajazz-nk61.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/1qSYiHKIQ4",
+        "tiktok": "https://vt.tiktok.com/ZSHE12etDnxgw-nHSRD/",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "Ajazz AK980 Wired",
+      "category": "keyboard",
+      "brand": "ajazz",
+      "img": "/src/assets/products/ajazz-ak980-wired.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/30dqbSPIBw",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "Hex80",
+      "category": "keyboard",
+      "brand": "qwertykeys x atk",
+      "img": "/src/assets/products/qwertykeys-hex80.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/6fYF75MXns",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "QK80 MK ii",
+      "category": "keyboard",
+      "brand": "qwertykeys",
+      "img": "/src/assets/products/qwertykeys-qk80-mk2.png",
       "description": "",
       "code": "",
       "links": {
@@ -79,52 +184,84 @@
       }
     },
     {
-      "title": "Mousepad",
+      "title": "RK S98",
+      "category": "keyboard",
+      "brand": "royalkludge",
+      "img": "/src/assets/products/royalkludge-s98.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/4Ap6W5GJKJ",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "INKY 75",
+      "category": "keyboard",
+      "brand": "elecfox",
+      "img": "/src/assets/products/elecfox-inky75.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/2B2oQqgDNq",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "RK M3",
+      "category": "mouse",
+      "brand": "royalkludge",
+      "img": "/src/assets/products/royalkludge-m3.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/LeDhg77JE",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "M5 Ultra",
+      "category": "mouse",
+      "brand": "mambasnake",
+      "img": "/src/assets/products/mambasnake-m5-ultra.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/LeDhg77JE",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "ZTEC ZMO1316",
+      "category": "mouse",
+      "brand": "ztec",
+      "img": "/src/assets/products/ztec-zmo1316.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "",
+        "tiktok": "https://vt.tiktok.com/ZSHs48M25tyXJ-fIjIR/",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "Orbitkey Desk Mat",
       "category": "mousepad",
-      "img": "/src/assets/cover.jpg",
+      "brand": "orbitkey",
+      "img": "/src/assets/products/orbitkey-deskmat.png",
       "description": "",
       "code": "",
       "links": {
-        "shopee": "",
-        "tiktok": "",
-        "lazada": "",
-        "other": ""
-      }
-    },
-    {
-      "title": "Ghibli Figure",
-      "category": "figure",
-      "img": "/src/assets/cover.jpg",
-      "description": "",
-      "code": "",
-      "links": {
-        "shopee": "",
-        "tiktok": "",
-        "lazada": "",
-        "other": ""
-      }
-    },
-    {
-      "title": "Desk Setup",
-      "category": "desk setup",
-      "img": "/src/assets/cover.jpg",
-      "description": "",
-      "code": "",
-      "links": {
-        "shopee": "",
-        "tiktok": "",
-        "lazada": "",
-        "other": ""
-      }
-    },
-    {
-      "title": "Case",
-      "category": "case",
-      "img": "/src/assets/cover.jpg",
-      "description": "",
-      "code": "",
-      "links": {
-        "shopee": "",
+        "shopee": "https://s.shopee.co.th/4L2H0pKMzJ",
         "tiktok": "",
         "lazada": "",
         "other": ""
