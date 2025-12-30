@@ -1,0 +1,24 @@
+.footer-section{
+  padding:24px 20px;
+  background:transparent;
+  text-align:center;
+}
+.footer-content{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.footer-text{
+  margin:0;
+  font-size:14px;
+  color:var(--muted);
+}
+
+@media (max-width:480px){
+  .footer-section{
+    padding:20px 16px;
+  }
+  .footer-text{
+    font-size:12px;
+  }
+}

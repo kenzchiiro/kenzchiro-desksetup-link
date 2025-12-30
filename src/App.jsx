@@ -2,6 +2,7 @@ import './App.css'
 import Header from './components/Header'
 import Highlight from './components/Highlight'
 import Contents from './components/Contents'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Header />
         <Highlight />
         <Contents />
+        <Footer />
       </div>
     </>
   )
