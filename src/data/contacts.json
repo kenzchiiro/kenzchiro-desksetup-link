@@ -4,17 +4,22 @@
       "id": 1,
       "title": "Contact for work",
       "subtitle": "ติดต่องาน",
-      "icon": "line",
-      "emoji": "💬",
+      "icon": "/src/assets/icon-line.svg",
       "url": "#"
     },
     {
       "id": 2,
       "title": "@kenzchiro",
       "subtitle": "Shopee VDO - อย่าลืมเก็บโค้ตก่อนนะ",
-      "icon": "shopee",
-      "emoji": "🛍️",
+      "icon": "/src/assets/icon-shopee.svg",
       "url": "#"
+    },
+    {
+      "id": 3,
+      "title": "Buy me a coffee",
+      "subtitle": "สนับสนุนค่ากาแฟ",
+      "icon": "/src/assets/icon-buy-me-a-coffee.svg",
+      "url": "https://easydonate.app/"
     }
   ]
 }

@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react'
 import './Contents.css'
 import itemsData from '../data/items.json'
+import Modal from './Modal'
 
 export default function Contents() {
   const [query, setQuery] = useState('')
@@ -153,6 +154,14 @@ export default function Contents() {
           </div>
         </div>
       )}
+
+      <Modal 
+        open={modalOpen} 
+        onClose={() => setModalOpen(false)} 
+        item={modalItem} 
+        copied={copied} 
+        onCopy={copyCode} 
+      />
     </section>
   )
 }

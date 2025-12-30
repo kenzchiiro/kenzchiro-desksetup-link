@@ -21,8 +21,8 @@
   overflow-x:auto;
   scroll-snap-type:x mandatory;
   -webkit-overflow-scrolling:touch;
-  padding:0 20px 12px 20px;
-  margin:0 -20px;
+  padding:0 0 12px 0;
+  margin:0;
 }
 .highlight-grid::-webkit-scrollbar{
   height:0;
@@ -44,7 +44,7 @@
   overflow:hidden;
   cursor:pointer;
   transition:transform .2s ease;
-  flex:0 0 calc(28% - 12px);
+  flex:0 0 calc(21.504% - 12px);
   scroll-snap-align:start;
 }
 .highlight-card:hover{
@@ -111,7 +111,7 @@
 
 @media (max-width:800px){
   .highlight-card{
-    flex:0 0 calc(42% - 9px);
+    flex:0 0 calc(26.88% - 9px);
   }
   .highlight-title{
     font-size:15px;
@@ -134,11 +134,10 @@
   }
   .highlight-grid{
     gap:12px;
-    margin:0 0;
-    padding: 16px 12px 16px;
+    margin:0;
   }
   .highlight-card{
-    flex:0 0 calc(65% - 6px);
+    flex:0 0 calc(41.6% - 6px);
     border-radius:12px;
   }
   .highlight-tag{

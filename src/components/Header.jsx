@@ -40,8 +40,8 @@ export default function Header() {
       <div className="contact-cards">
         {contacts.map((contact) => (
           <a key={contact.id} className="contact-card" href={contact.url} role="button">
-            <div className={`contact-icon ${contact.icon}`}>
-              <img src={`/src/assets/icon-${contact.icon}.svg`} alt={contact.icon} />
+            <div className="contact-icon">
+              <img src={contact.icon} alt={contact.title} />
             </div>
             <div className="contact-body">
               <div className="contact-title">{contact.title}</div>

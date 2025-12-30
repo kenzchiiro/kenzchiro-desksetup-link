@@ -1,16 +1,55 @@
 {
   "items": [
     {
-      "title": "Pink Keyboard",
-      "category": "keyboard",
-      "img": "/src/assets/cover.jpg",
-      "description": "Custom pink mechanical keyboard with PBT keycaps and hot-swappable switches.",
-      "code": "PINK10",
+      "title": "Baraccuda",
+      "category": "razer",
+      "img": "/src/assets/products/razer-barracuda.jpg",
+      "description": "Wireless gaming headset with THX Spatial Audio and hybrid ANC for immersive sound.",
+      "code": "",
       "links": {
-        "shopee": "https://shopee.co.th/product/123456",
-        "tiktok": "https://www.tiktok.com/@kenzchiro",
-        "lazada": "https://www.lazada.co.th/products/123456",
-        "other": "dd"
+        "shopee": "https://s.shopee.co.th/30fsbEEnEC",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "Firefly V2",
+      "category": "razer",
+      "img": "/src/assets/products/razer-firefly-v2.jpg",
+      "description": "Hard gaming mouse mat with customizable Chroma RGB lighting across 19 zones.",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/VyXcnSnNm",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "Basilisk V3 Pro",
+      "category": "razer",
+      "img": "/src/assets/products/razer-basilisk-v3-pro.jpg",
+      "description": "Wireless gaming mouse with 30K DPI sensor, 13 programmable buttons, and Razer Chroma RGB.",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/50Qwyvp7GJ",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "Black Widow V4",
+      "category": "razer",
+      "img": "/src/assets/products/razer-black-widow-v4.jpg",
+      "description": "Mechanical gaming keyboard with Razer Green switches, command dial, and per-key RGB lighting.",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/804YYWF7wO",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
       }
     },
     {
@@ -18,7 +57,7 @@
       "category": "keyboard",
       "img": "/src/assets/cover.jpg",
       "description": "Custom pink mechanical keyboard with PBT keycaps and hot-swappable switches.",
-      "code": "PINK10",
+      "code": "PINK101",
       "links": {
         "shopee": "",
         "tiktok": "",
