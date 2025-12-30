@@ -1,16 +1,36 @@
-# React + Vite
+# 🖥️ kenzchiro - Desk Setup & Gaming Gear
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, interactive website showcasing my curated collection of gaming peripherals, keyboards, mice, headsets, and desk accessories.
 
-Currently, two official plugins are available:
+🌐 **Live Site:** [kenzchiro.link](https://kenzchiro.link)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+- 🎯 Product showcase with search and filtering
+- 📱 Fully responsive design
+- 🎨 Modal product details with purchase links
+- 🎆 Seasonal celebration animations
+- 🔗 Direct links to Shopee, TikTok, Lazada
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+- React 19 + Vite 7
+- CSS3 + Tailwind CSS
+- GitHub Pages + GitHub Actions
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Quick Start
+
+```bash
+npm install
+npm run dev
+```
+
+## 👤 Author
+
+**kenzchiro** 🪴
+- TikTok: [@kenzchiro](https://www.tiktok.com/@kenzchiro)
+- Instagram: [@kenzchiro](https://www.instagram.com/kenzchiro)
+
+---
+
+Made with ❤️ using React + Vite
