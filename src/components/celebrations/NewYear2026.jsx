@@ -102,7 +102,7 @@ function NewYear2026() {
           Wishing you health, happiness, and prosperity!
         </p>
         <p className="celebration-thanks">
-          Thank you for following and supporting <strong>@kenzchiro</strong> across all channels! 💙
+          Thank you for following and supporting <strong>@kenzchiro</strong> across all channels! 🤍
         </p>
         <div className="countdown">
           <div className="countdown-item">

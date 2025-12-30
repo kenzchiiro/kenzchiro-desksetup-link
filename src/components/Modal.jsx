@@ -54,7 +54,7 @@ export default function Modal({ open, onClose, item, copied, onCopy }) {
                   onClick={onClose}
                 >
                   <div className="ch-icon shopee">
-                    <img src="/src/assets/icon-shopee.svg" alt="Shopee" />
+                    <img src="/assets/icon-shopee.svg" alt="Shopee" />
                   </div>
                   <div className="ch-label">Shopee</div>
                 </a>
@@ -69,7 +69,7 @@ export default function Modal({ open, onClose, item, copied, onCopy }) {
                   onClick={onClose}
                 >
                   <div className="ch-icon tiktok">
-                    <img src="/src/assets/icon-tiktok.svg" alt="TikTok" />
+                    <img src="/assets/icon-tiktok.svg" alt="TikTok" />
                   </div>
                   <div className="ch-label">TikTok</div>
                 </a>
@@ -84,7 +84,7 @@ export default function Modal({ open, onClose, item, copied, onCopy }) {
                   onClick={onClose}
                 >
                   <div className="ch-icon lazada">
-                    <img src="/src/assets/icon-lazada.svg" alt="Lazada" />
+                    <img src="/assets/icon-lazada.svg" alt="Lazada" />
                   </div>
                   <div className="ch-label">Lazada</div>
                 </a>
@@ -99,7 +99,7 @@ export default function Modal({ open, onClose, item, copied, onCopy }) {
                   onClick={onClose}
                 >
                   <div className="ch-icon other">
-                    <img src="/src/assets/icon-external-link.svg" alt="Other" />
+                    <img src="/assets/icon-external-link.svg" alt="Other" />
                   </div>
                   <div className="ch-label">Other</div>
                 </a>
