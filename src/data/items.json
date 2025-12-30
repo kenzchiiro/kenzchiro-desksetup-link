@@ -4,7 +4,7 @@
       "title": "Barracuda - Phantom White",
       "category": "razer",
       "brand": "razer",
-      "img": "/assets/products/razer-barracuda.png",
+      "img": "assets/products/razer-barracuda.png",
       "description": "Wireless gaming headset with THX Spatial Audio and hybrid ANC for immersive sound.",
       "code": "",
       "links": {
@@ -18,7 +18,7 @@
       "title": "Firefly V2 - Phantom White",
       "category": "razer",
       "brand": "razer",
-      "img": "/assets/products/razer-firefly-v2.jpg",
+      "img": "assets/products/razer-firefly-v2.jpg",
       "description": "Hard gaming mouse mat with customizable Chroma RGB lighting across 19 zones.",
       "code": "",
       "links": {
@@ -32,7 +32,7 @@
       "title": "Basilisk V3 Pro - Phantom White",
       "category": "razer",
       "brand": "razer",
-      "img": "/assets/products/razer-basilisk-v3-pro.png",
+      "img": "assets/products/razer-basilisk-v3-pro.png",
       "description": "Wireless gaming mouse with 30K DPI sensor, 13 programmable buttons, and Razer Chroma RGB.",
       "code": "",
       "links": {
@@ -46,7 +46,7 @@
       "title": "Black Widow V4 - Phantom White",
       "category": "razer",
       "brand": "razer",
-      "img": "/assets/products/razer-black-widow-v4.jpg",
+      "img": "assets/products/razer-black-widow-v4.jpg",
       "description": "Mechanical gaming keyboard with Razer Green switches, command dial, and per-key RGB lighting.",
       "code": "",
       "links": {
@@ -60,7 +60,7 @@
       "title": "Womier ERA75",
       "category": "keyboard",
       "brand": "womier",
-      "img": "/assets/products/womier-era75.jpg",
+      "img": "assets/products/womier-era75.jpg",
       "description": "[Womier] 75% mechanical keyboard kit | hot-swappable | gasket mount",
       "code": "",
       "links": {
@@ -74,7 +74,7 @@
       "title": "Ergonoz KB01",
       "category": "keyboard",
       "brand": "ergonoz",
-      "img": "/assets/products/ergonoz-kb01.png",
+      "img": "assets/products/ergonoz-kb01.png",
       "description": "Ergonoz Keyboard Kb01 Is a 2-System Wireless Keyboard That Supports Both 2.4Ghz and Bluetooth.",
       "code": "",
       "links": {
@@ -88,7 +88,7 @@
       "title": "Gconic A75 Pro",
       "category": "keyboard",
       "brand": "gconic",
-      "img": "/assets/products/gconic-a75-pro.png",
+      "img": "assets/products/gconic-a75-pro.png",
       "description": "",
       "code": "",
       "links": {
@@ -102,7 +102,7 @@
       "title": "Gconic A98 Pro",
       "category": "keyboard",
       "brand": "gconic",
-      "img": "/assets/products/gconic-a98-pro.png",
+      "img": "assets/products/gconic-a98-pro.png",
       "description": "",
       "code": "",
       "links": {
@@ -116,7 +116,7 @@
       "title": "Ajazz NK68",
       "category": "keyboard",
       "brand": "ajazz",
-      "img": "/assets/products/ajazz-nk68.png",
+      "img": "assets/products/ajazz-nk68.png",
       "description": "",
       "code": "",
       "links": {
@@ -130,7 +130,7 @@
       "title": "Ajazz NK61",
       "category": "keyboard",
       "brand": "ajazz",
-      "img": "/assets/products/ajazz-nk61.png",
+      "img": "assets/products/ajazz-nk61.png",
       "description": "",
       "code": "",
       "links": {
@@ -144,7 +144,7 @@
       "title": "Ajazz AK980 Wired",
       "category": "keyboard",
       "brand": "ajazz",
-      "img": "/assets/products/ajazz-ak980-wired.png",
+      "img": "assets/products/ajazz-ak980-wired.png",
       "description": "",
       "code": "",
       "links": {
@@ -158,7 +158,7 @@
       "title": "Hex80",
       "category": "keyboard",
       "brand": "qwertykeys x atk",
-      "img": "/assets/products/qwertykeys-hex80.png",
+      "img": "assets/products/qwertykeys-hex80.png",
       "description": "",
       "code": "",
       "links": {
@@ -172,7 +172,7 @@
       "title": "QK80 MK ii",
       "category": "keyboard",
       "brand": "qwertykeys",
-      "img": "/assets/products/qwertykeys-qk80-mk2.png",
+      "img": "assets/products/qwertykeys-qk80-mk2.png",
       "description": "",
       "code": "",
       "links": {
@@ -186,7 +186,7 @@
       "title": "RK S98",
       "category": "keyboard",
       "brand": "royalkludge",
-      "img": "/assets/products/royalkludge-s98.png",
+      "img": "assets/products/royalkludge-s98.png",
       "description": "",
       "code": "",
       "links": {
@@ -200,7 +200,7 @@
       "title": "INKY 75",
       "category": "keyboard",
       "brand": "elecfox",
-      "img": "/assets/products/elecfox-inky75.png",
+      "img": "assets/products/elecfox-inky75.png",
       "description": "",
       "code": "",
       "links": {
@@ -214,7 +214,7 @@
       "title": "RK M3",
       "category": "mouse",
       "brand": "royalkludge",
-      "img": "/assets/products/royalkludge-m3.png",
+      "img": "assets/products/royalkludge-m3.png",
       "description": "",
       "code": "",
       "links": {
@@ -228,7 +228,7 @@
       "title": "M5 Ultra",
       "category": "mouse",
       "brand": "mambasnake",
-      "img": "/assets/products/mambasnake-m5-ultra.png",
+      "img": "assets/products/mambasnake-m5-ultra.png",
       "description": "",
       "code": "",
       "links": {
@@ -242,7 +242,7 @@
       "title": "ZTEC ZMO1316",
       "category": "mouse",
       "brand": "ztec",
-      "img": "/assets/products/ztec-zmo1316.png",
+      "img": "assets/products/ztec-zmo1316.png",
       "description": "",
       "code": "",
       "links": {
@@ -256,7 +256,7 @@
       "title": "Orbitkey Desk Mat",
       "category": "mousepad",
       "brand": "orbitkey",
-      "img": "/assets/products/orbitkey-deskmat.png",
+      "img": "assets/products/orbitkey-deskmat.png",
       "description": "",
       "code": "",
       "links": {

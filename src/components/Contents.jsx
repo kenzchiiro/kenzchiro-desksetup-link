@@ -123,21 +123,21 @@ export default function Contents() {
             <div className="channel-grid">
               <a className="channel" href={modalItem.links?.shopee || `https://shopee.co.th/search?keyword=${encodeURIComponent(modalItem.title)}`} target="_blank" rel="noreferrer" onClick={() => setModalOpen(false)}>
                 <div className="ch-icon shopee">
-                  <img src="/assets/icon-shopee.svg" alt="Shopee" />
+                  <img src="assets/icon-shopee.svg" alt="Shopee" />
                 </div>
                 <div className="ch-label">Shopee</div>
               </a>
 
               <a className="channel" href={modalItem.links?.tiktok || `https://www.tiktok.com/search?q=${encodeURIComponent(modalItem.title)}`} target="_blank" rel="noreferrer" onClick={() => setModalOpen(false)}>
                 <div className="ch-icon tiktok">
-                  <img src="/assets/icon-tiktok.svg" alt="TikTok" />
+                  <img src="assets/icon-tiktok.svg" alt="TikTok" />
                 </div>
                 <div className="ch-label">TikTok</div>
               </a>
 
               <a className="channel" href={modalItem.links?.lazada || `https://www.lazada.co.th/catalog/?q=${encodeURIComponent(modalItem.title)}`} target="_blank" rel="noreferrer" onClick={() => setModalOpen(false)}>
                 <div className="ch-icon lazada">
-                  <img src="/assets/icon-lazada.svg" alt="Lazada" />
+                  <img src="assets/icon-lazada.svg" alt="Lazada" />
                 </div>
                 <div className="ch-label">Lazada</div>
               </a>
@@ -145,7 +145,7 @@ export default function Contents() {
               {modalItem.links?.other && (
                 <a className="channel" href={modalItem.links.other} target="_blank" rel="noreferrer" onClick={() => setModalOpen(false)}>
                   <div className="ch-icon other">
-                  <img src="/assets/icon-external-link.svg" alt="Other" />
+                  <img src="assets/icon-external-link.svg" alt="Other" />
                   </div>
                   <div className="ch-label">Other</div>
                 </a>
