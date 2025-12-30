@@ -99,7 +99,6 @@
       }
     },
         {
-      "id": 8,
       "title": "Gconic A98 Pro",
       "category": "keyboard",
       "brand": "gconic",
@@ -270,14 +269,12 @@
   ],
   "contacts": [
     {
-      "id": 1,
       "title": "Contact for work",
       "subtitle": "ติดต่องาน",
       "icon": "line",
       "url": "#"
     },
     {
-      "id": 2,
       "title": "@kenzchiro",
       "subtitle": "Shopee VDO - อย่าลืมเก็บโค้ตก่อนนะ",
       "icon": "shopee",

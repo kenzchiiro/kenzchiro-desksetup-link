@@ -1,0 +1,254 @@
+.celebration-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.celebration-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.8);
+  pointer-events: auto;
+  z-index: 102;
+  transition: all 0.2s ease;
+}
+
+.celebration-close:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.countdown-container {
+  position: fixed;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(20px);
+  padding: 24px 32px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  pointer-events: auto;
+  z-index: 101;
+  animation: slideDown 0.5s ease;
+  position: relative;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.celebration-title {
+  margin: 0 0 12px;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  background: linear-gradient(135deg, #fff 0%, #ffd700 50%, #fff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.celebration-greeting {
+  margin: 0 auto 24px;
+  padding: 0 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+}
+
+.celebration-thanks {
+  margin: 0 auto 28px;
+  padding: 0 20px;
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  font-style: italic;
+}
+
+.celebration-thanks strong {
+  color: #fff;
+  font-weight: 700;
+}
+
+.countdown {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 70px;
+}
+
+.countdown-value {
+  font-size: 36px;
+  font-weight: 800;
+  color: #fff;
+  font-family: 'SF Pro Display', -apple-system, sans-serif;
+  line-height: 1;
+  text-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.countdown-label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 4px;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Fireworks Effect - Radial Explosion Style */
+.firework {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: fireworkExplode 2s ease-out forwards;
+  box-shadow: 0 0 10px currentColor;
+}
+
+@keyframes fireworkExplode {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--tx), var(--ty));
+    opacity: 0;
+  }
+}
+
+/* Stars */
+.stars-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: gold;
+  border-radius: 50%;
+  animation: starTwinkle 3s infinite;
+  box-shadow: 0 0 6px gold;
+}
+
+@keyframes starTwinkle {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 640px) {
+  .countdown-container {
+    top: 40px;
+    padding: 20px 24px;
+  }
+
+  .celebration-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .celebration-greeting {
+    font-size: 13px;
+    margin-bottom: 16px;
+    padding: 0 60px;
+  }
+
+  .celebration-thanks {
+    font-size: 12px;
+    margin-bottom: 20px;
+    padding: 0 60px;
+  }
+
+  .countdown {
+    gap: 12px;
+  }
+
+  .countdown-item {
+    min-width: 60px;
+  }
+
+  .countdown-value {
+    font-size: 28px;
+  }
+
+  .countdown-label {
+    font-size: 10px;
+  }
+
+  .celebration-close {
+    top: 10px;
+    right: 10px;
+    width: 28px;
+    height: 28px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .countdown-container {
+    width: calc(100% - 32px);
+    max-width: 400px;
+  }
+
+  .countdown {
+    gap: 8px;
+  }
+
+  .countdown-item {
+    min-width: 55px;
+  }
+
+  .countdown-value {
+    font-size: 24px;
+  }
+}
