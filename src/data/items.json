@@ -18,7 +18,7 @@
       "title": "Firefly V2 - Phantom White",
       "category": "razer",
       "brand": "razer",
-      "img": "assets/products/razer-firefly-v2.jpg",
+      "img": "assets/products/razer-firefly-v2.png",
       "description": "Hard gaming mouse mat with customizable Chroma RGB lighting across 19 zones.",
       "code": "",
       "links": {
@@ -46,13 +46,69 @@
       "title": "Black Widow V4 - Phantom White",
       "category": "razer",
       "brand": "razer",
-      "img": "assets/products/razer-black-widow-v4.jpg",
+      "img": "assets/products/razer-black-widow-v4.png",
       "description": "Mechanical gaming keyboard with Razer Green switches, command dial, and per-key RGB lighting.",
       "code": "",
       "links": {
         "shopee": "https://s.shopee.co.th/804YYWF7wO",
         "tiktok": "",
         "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "Elgato - Wave Neo",
+      "category": "elgato",
+      "brand": "elgato",
+      "img": "assets/products/elgato-wave-neo.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/1qVPklXv0u",
+        "tiktok": "https://vt.tiktok.com/ZSHEdExtBHKTk-FilJI/",
+        "lazada": "https://s.lazada.co.th/s.Zb96Sc",
+        "other": ""
+      }
+    },
+    {
+      "title": "Elgato - Stream Deck Neo",
+      "category": "elgato",
+      "brand": "elgato",
+      "img": "assets/products/elgato-stream-deck-neo.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/8KitUj73Dt",
+        "tiktok": "https://vt.tiktok.com/ZSHEdExtBHKTk-FilJI/",
+        "lazada": "https://s.lazada.co.th/s.Zb96Sc",
+        "other": ""
+      }
+    },
+    {
+      "title": "Elgato - Facecam Neo",
+      "category": "elgato",
+      "brand": "elgato",
+      "img": "assets/products/elgato-facecam-neo.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/8KitV1zRdc",
+        "tiktok": "https://vt.tiktok.com/ZSHEdExtBHKTk-FilJI/",
+        "lazada": "https://s.lazada.co.th/s.Zb96Sc",
+        "other": ""
+      }
+    },
+    {
+      "title": "Elgato - Capture Card Neo",
+      "category": "elgato",
+      "brand": "elgato",
+      "img": "assets/products/elgato-capture-card-neo.png",
+      "description": "Mechanical gaming keyboard with Razer Green switches, command dial, and per-key RGB lighting.",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/9pXhHcxuZ2",
+        "tiktok": "https://vt.tiktok.com/ZSHEdExtBHKTk-FilJI/",
+        "lazada": "https://s.lazada.co.th/s.Zb96Sc",
         "other": ""
       }
     },
