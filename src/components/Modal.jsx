@@ -51,7 +51,17 @@ export default function Modal({ open, onClose, item, copied, onCopy }) {
                   href={item.links.shopee} 
                   target="_blank" 
                   rel="noreferrer" 
-                  onClick={onClose}
+                  onClick={() => {
+                    if (window.gtag) {
+                      window.gtag('event', 'click_product_link', {
+                        item_name: item.title,
+                        item_brand: item.brand,
+                      item_category: item.category,
+                        platform: 'shopee'
+                      });
+                    }
+                    onClose();
+                  }}
                 >
                   <div className="ch-icon shopee">
                     <img src="assets/icon-shopee.svg" alt="Shopee" />
@@ -66,7 +76,17 @@ export default function Modal({ open, onClose, item, copied, onCopy }) {
                   href={item.links.tiktok} 
                   target="_blank" 
                   rel="noreferrer" 
-                  onClick={onClose}
+                  onClick={() => {
+                    if (window.gtag) {
+                      window.gtag('event', 'click_product_link', {
+                        item_name: item.title,
+                        item_brand: item.brand,
+                        item_category: item.category,
+                        platform: 'tiktok'
+                      });
+                    }
+                    onClose();
+                  }}
                 >
                   <div className="ch-icon tiktok">
                     <img src="assets/icon-tiktok.svg" alt="TikTok" />
@@ -81,7 +101,17 @@ export default function Modal({ open, onClose, item, copied, onCopy }) {
                   href={item.links.lazada} 
                   target="_blank" 
                   rel="noreferrer" 
-                  onClick={onClose}
+                  onClick={() => {
+                    if (window.gtag) {
+                      window.gtag('event', 'click_product_link', {
+                        item_name: item.title,
+                        item_brand: item.brand,
+                        item_category: item.category,
+                        platform: 'lazada'
+                      });
+                    }
+                    onClose();
+                  }}
                 >
                   <div className="ch-icon lazada">
                     <img src="assets/icon-lazada.svg" alt="Lazada" />
@@ -96,7 +126,17 @@ export default function Modal({ open, onClose, item, copied, onCopy }) {
                   href={item.links.other} 
                   target="_blank" 
                   rel="noreferrer" 
-                  onClick={onClose}
+                  onClick={() => {
+                    if (window.gtag) {
+                      window.gtag('event', 'click_product_link', {
+                        item_name: item.title,
+                        item_brand: item.brand,
+                        item_category: item.category,
+                        platform: 'other'
+                      });
+                    }
+                    onClose();
+                  }}
                 >
                   <div className="ch-icon other">
                     <img src="assets/icon-external-link.svg" alt="Other" />
