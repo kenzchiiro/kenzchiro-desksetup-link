@@ -121,13 +121,17 @@ export default function Contents() {
             <p className="modal-sub">Order the way that’s easiest for you.</p>
 
             <div className="channel-grid">
-              <a className="channel" href={modalItem.links?.shopee || `https://shopee.co.th/search?keyword=${encodeURIComponent(modalItem.title)}`} target="_blank" rel="noreferrer" onClick={() => {
+              <a className="channel" href={modalItem.links?.shopee || `https://shopee.co.th/search?keyword=${encodeURIComponent(modalItem.title)}`} target="_blank" rel="noreferrer" onClick={(e) => {
+                const actualUrl = e.currentTarget.href;
                 if (window.gtag) {
                   window.gtag('event', 'click_product_link', {
+                    event_category: 'product_interaction',
+                    event_label: modalItem.title,
                     item_name: modalItem.title,
-                    item_brand: modalItem.brand,
-                    item_category: modalItem.category,
-                    platform: 'shopee'
+                    item_brand: modalItem.brand || 'unknown',
+                    item_category: modalItem.category || 'unknown',
+                    platform: 'shopee',
+                    link_url: actualUrl
                   });
                 }
                 setModalOpen(false);
@@ -138,13 +142,17 @@ export default function Contents() {
                 <div className="ch-label">Shopee</div>
               </a>
 
-              <a className="channel" href={modalItem.links?.tiktok || `https://www.tiktok.com/search?q=${encodeURIComponent(modalItem.title)}`} target="_blank" rel="noreferrer" onClick={() => {
+              <a className="channel" href={modalItem.links?.tiktok || `https://www.tiktok.com/search?q=${encodeURIComponent(modalItem.title)}`} target="_blank" rel="noreferrer" onClick={(e) => {
+                const actualUrl = e.currentTarget.href;
                 if (window.gtag) {
                   window.gtag('event', 'click_product_link', {
+                    event_category: 'product_interaction',
+                    event_label: modalItem.title,
                     item_name: modalItem.title,
-                    item_brand: modalItem.brand,
-                    item_category: modalItem.category,
-                    platform: 'tiktok'
+                    item_brand: modalItem.brand || 'unknown',
+                    item_category: modalItem.category || 'unknown',
+                    platform: 'tiktok',
+                    link_url: actualUrl
                   });
                 }
                 setModalOpen(false);
@@ -155,13 +163,17 @@ export default function Contents() {
                 <div className="ch-label">TikTok</div>
               </a>
 
-              <a className="channel" href={modalItem.links?.lazada || `https://www.lazada.co.th/catalog/?q=${encodeURIComponent(modalItem.title)}`} target="_blank" rel="noreferrer" onClick={() => {
+              <a className="channel" href={modalItem.links?.lazada || `https://www.lazada.co.th/catalog/?q=${encodeURIComponent(modalItem.title)}`} target="_blank" rel="noreferrer" onClick={(e) => {
+                const actualUrl = e.currentTarget.href;
                 if (window.gtag) {
                   window.gtag('event', 'click_product_link', {
+                    event_category: 'product_interaction',
+                    event_label: modalItem.title,
                     item_name: modalItem.title,
-                    item_brand: modalItem.brand,
-                    item_category: modalItem.category,
-                    platform: 'lazada'
+                    item_brand: modalItem.brand || 'unknown',
+                    item_category: modalItem.category || 'unknown',
+                    platform: 'lazada',
+                    link_url: actualUrl
                   });
                 }
                 setModalOpen(false);
@@ -173,13 +185,17 @@ export default function Contents() {
               </a>
 
               {modalItem.links?.other && (
-                <a className="channel" href={modalItem.links.other} target="_blank" rel="noreferrer" onClick={() => {
+                <a className="channel" href={modalItem.links.other} target="_blank" rel="noreferrer" onClick={(e) => {
+                  const actualUrl = e.currentTarget.href;
                   if (window.gtag) {
                     window.gtag('event', 'click_product_link', {
+                      event_category: 'product_interaction',
+                      event_label: modalItem.title,
                       item_name: modalItem.title,
-                      item_brand: modalItem.brand,
-                      item_category: modalItem.category,
-                      platform: 'other'
+                      item_brand: modalItem.brand || 'unknown',
+                      item_category: modalItem.category || 'unknown',
+                      platform: 'other',
+                      link_url: actualUrl
                     });
                   }
                   setModalOpen(false);

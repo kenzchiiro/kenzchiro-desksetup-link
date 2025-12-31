@@ -54,10 +54,13 @@ export default function Modal({ open, onClose, item, copied, onCopy }) {
                   onClick={() => {
                     if (window.gtag) {
                       window.gtag('event', 'click_product_link', {
+                        event_category: 'product_interaction',
+                        event_label: item.title,
                         item_name: item.title,
-                        item_brand: item.brand,
-                      item_category: item.category,
-                        platform: 'shopee'
+                        item_brand: item.brand || 'unknown',
+                        item_category: item.category || 'unknown',
+                        platform: 'shopee',
+                        link_url: item.links.shopee
                       });
                     }
                     onClose();
@@ -79,10 +82,13 @@ export default function Modal({ open, onClose, item, copied, onCopy }) {
                   onClick={() => {
                     if (window.gtag) {
                       window.gtag('event', 'click_product_link', {
+                        event_category: 'product_interaction',
+                        event_label: item.title,
                         item_name: item.title,
-                        item_brand: item.brand,
-                        item_category: item.category,
-                        platform: 'tiktok'
+                        item_brand: item.brand || 'unknown',
+                        item_category: item.category || 'unknown',
+                        platform: 'tiktok',
+                        link_url: item.links.tiktok
                       });
                     }
                     onClose();
@@ -104,10 +110,13 @@ export default function Modal({ open, onClose, item, copied, onCopy }) {
                   onClick={() => {
                     if (window.gtag) {
                       window.gtag('event', 'click_product_link', {
+                        event_category: 'product_interaction',
+                        event_label: item.title,
                         item_name: item.title,
-                        item_brand: item.brand,
-                        item_category: item.category,
-                        platform: 'lazada'
+                        item_brand: item.brand || 'unknown',
+                        item_category: item.category || 'unknown',
+                        platform: 'lazada',
+                        link_url: item.links.lazada
                       });
                     }
                     onClose();
@@ -129,10 +138,13 @@ export default function Modal({ open, onClose, item, copied, onCopy }) {
                   onClick={() => {
                     if (window.gtag) {
                       window.gtag('event', 'click_product_link', {
+                        event_category: 'product_interaction',
+                        event_label: item.title,
                         item_name: item.title,
-                        item_brand: item.brand,
-                        item_category: item.category,
-                        platform: 'other'
+                        item_brand: item.brand || 'unknown',
+                        item_category: item.category || 'unknown',
+                        platform: 'other',
+                        link_url: item.links.other
                       });
                     }
                     onClose();
