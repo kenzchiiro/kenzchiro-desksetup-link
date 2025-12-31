@@ -6,7 +6,8 @@
 .modal-content{display:flex;gap:0}
 .modal-image-wrapper{flex:0 0 45%;display:flex;align-items:center;justify-content:center;padding:40px;position:relative}
 .modal-image{width:100%;height:100%;object-fit:contain;border-radius:12px}
-.modal-brand-chip{position:absolute;bottom:52px;left:52px;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);padding:8px 16px;border-radius:8px;font-size:12px;font-weight:700;color:#333;text-transform:uppercase;letter-spacing:0.5px;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
+.modal-category-overlay{position:absolute;bottom:52px;left:52px;display:flex;flex-wrap:wrap;gap:8px;max-width:calc(100% - 104px)}
+.modal-category-chip{background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);padding:6px 12px;border-radius:8px;font-size:11px;font-weight:600;color:#333;text-transform:uppercase;letter-spacing:0.5px;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
 .modal-body{flex:1;padding:40px;display:flex;flex-direction:column}
 .modal-flat{max-width:800px}
 .modal-title{font-size:24px;margin:0 0 12px;color:#111;font-weight:700}
@@ -34,7 +35,8 @@
   .modal{max-width:90%;border-radius:12px}
   .modal-content{flex-direction:column}
   .modal-image-wrapper{flex:0 0 auto;padding:16px;min-height:200px}
-  .modal-brand-chip{bottom:28px;left:28px;font-size:11px;padding:6px 12px}
+  .modal-category-overlay{bottom:28px;left:28px;max-width:calc(100% - 56px)}
+  .modal-category-chip{font-size:10px;padding:5px 10px}
   .modal-body{padding:20px}
   .modal-title{font-size:20px}
   .modal-desc{font-size:14px}

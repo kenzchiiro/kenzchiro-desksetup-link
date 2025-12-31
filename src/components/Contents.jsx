@@ -32,26 +32,42 @@ export default function Contents() {
   }
 
   const categories = useMemo(() => {
-    const set = new Set(ITEMS.map((i) => i.category))
-    return ['all', ...Array.from(set)]
+    const allCategories = []
+    ITEMS.forEach((i) => {
+      if (Array.isArray(i.category)) {
+        allCategories.push(...i.category)
+      } else {
+        allCategories.push(i.category)
+      }
+    })
+    const set = new Set(allCategories)
+    const sortedCategories = Array.from(set).sort()
+    return ['all', ...sortedCategories]
   }, [])
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase()
     return ITEMS.filter((it) => {
-      if (active !== 'all' && it.category !== active) return false
+      // Check category filter
+      if (active !== 'all') {
+        const itemCategories = Array.isArray(it.category) ? it.category : [it.category]
+        if (!itemCategories.includes(active)) return false
+      }
+      // Check search query
       if (!q) return true
-      return it.title.toLowerCase().includes(q) || it.category.toLowerCase().includes(q)
+      const categoryText = Array.isArray(it.category) ? it.category.join(' ') : it.category
+      return it.title.toLowerCase().includes(q) || categoryText.toLowerCase().includes(q)
     })
   }, [query, active])
 
   const groupedByCategory = useMemo(() => {
     const groups = {}
     filtered.forEach((item) => {
-      if (!groups[item.category]) {
-        groups[item.category] = []
+      const firstCategory = Array.isArray(item.category) ? item.category[0] : item.category
+      if (!groups[firstCategory]) {
+        groups[firstCategory] = []
       }
-      groups[item.category].push(item)
+      groups[firstCategory].push(item)
     })
     return groups
   }, [filtered])
@@ -124,12 +140,12 @@ export default function Contents() {
               <a className="channel" href={modalItem.links?.shopee || `https://shopee.co.th/search?keyword=${encodeURIComponent(modalItem.title)}`} target="_blank" rel="noreferrer" onClick={(e) => {
                 const actualUrl = e.currentTarget.href;
                 if (window.gtag) {
+                  const firstCategory = Array.isArray(modalItem.category) ? modalItem.category[0] : (modalItem.category || 'unknown');
                   window.gtag('event', 'click_product_link', {
                     event_category: 'product_interaction',
                     event_label: modalItem.title,
                     item_name: modalItem.title,
-                    item_brand: modalItem.brand || 'unknown',
-                    item_category: modalItem.category || 'unknown',
+                    item_category: firstCategory,
                     platform: 'shopee',
                     link_url: actualUrl
                   });
@@ -145,12 +161,12 @@ export default function Contents() {
               <a className="channel" href={modalItem.links?.tiktok || `https://www.tiktok.com/search?q=${encodeURIComponent(modalItem.title)}`} target="_blank" rel="noreferrer" onClick={(e) => {
                 const actualUrl = e.currentTarget.href;
                 if (window.gtag) {
+                  const firstCategory = Array.isArray(modalItem.category) ? modalItem.category[0] : (modalItem.category || 'unknown');
                   window.gtag('event', 'click_product_link', {
                     event_category: 'product_interaction',
                     event_label: modalItem.title,
                     item_name: modalItem.title,
-                    item_brand: modalItem.brand || 'unknown',
-                    item_category: modalItem.category || 'unknown',
+                    item_category: firstCategory,
                     platform: 'tiktok',
                     link_url: actualUrl
                   });
@@ -166,12 +182,12 @@ export default function Contents() {
               <a className="channel" href={modalItem.links?.lazada || `https://www.lazada.co.th/catalog/?q=${encodeURIComponent(modalItem.title)}`} target="_blank" rel="noreferrer" onClick={(e) => {
                 const actualUrl = e.currentTarget.href;
                 if (window.gtag) {
+                  const firstCategory = Array.isArray(modalItem.category) ? modalItem.category[0] : (modalItem.category || 'unknown');
                   window.gtag('event', 'click_product_link', {
                     event_category: 'product_interaction',
                     event_label: modalItem.title,
                     item_name: modalItem.title,
-                    item_brand: modalItem.brand || 'unknown',
-                    item_category: modalItem.category || 'unknown',
+                    item_category: firstCategory,
                     platform: 'lazada',
                     link_url: actualUrl
                   });
@@ -188,12 +204,12 @@ export default function Contents() {
                 <a className="channel" href={modalItem.links.other} target="_blank" rel="noreferrer" onClick={(e) => {
                   const actualUrl = e.currentTarget.href;
                   if (window.gtag) {
+                    const firstCategory = Array.isArray(modalItem.category) ? modalItem.category[0] : (modalItem.category || 'unknown');
                     window.gtag('event', 'click_product_link', {
                       event_category: 'product_interaction',
                       event_label: modalItem.title,
                       item_name: modalItem.title,
-                      item_brand: modalItem.brand || 'unknown',
-                      item_category: modalItem.category || 'unknown',
+                      item_category: firstCategory,
                       platform: 'other',
                       link_url: actualUrl
                     });

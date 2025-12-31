@@ -13,8 +13,13 @@ export default function Modal({ open, onClose, item, copied, onCopy }) {
           {item.img && (
             <div className="modal-image-wrapper">
               <img src={item.img} alt={item.title} className="modal-image" />
-              {item.brand && (
-                <div className="modal-brand-chip">{item.brand}</div>
+              {(item.brand || item.category) && (
+                <div className="modal-category-overlay">
+                  {item.brand && <span className="modal-category-chip">{item.brand}</span>}
+                  {item.category && (Array.isArray(item.category) ? item.category : [item.category]).map((cat, idx) => (
+                    <span key={idx} className="modal-category-chip">{cat}</span>
+                  ))}
+                </div>
               )}
             </div>
           )}
@@ -53,12 +58,12 @@ export default function Modal({ open, onClose, item, copied, onCopy }) {
                   rel="noreferrer" 
                   onClick={() => {
                     if (window.gtag) {
+                      const firstCategory = Array.isArray(item.category) ? item.category[0] : (item.category || 'unknown');
                       window.gtag('event', 'click_product_link', {
                         event_category: 'product_interaction',
                         event_label: item.title,
                         item_name: item.title,
-                        item_brand: item.brand || 'unknown',
-                        item_category: item.category || 'unknown',
+                        item_category: firstCategory,
                         platform: 'shopee',
                         link_url: item.links.shopee
                       });
@@ -81,12 +86,12 @@ export default function Modal({ open, onClose, item, copied, onCopy }) {
                   rel="noreferrer" 
                   onClick={() => {
                     if (window.gtag) {
+                      const firstCategory = Array.isArray(item.category) ? item.category[0] : (item.category || 'unknown');
                       window.gtag('event', 'click_product_link', {
                         event_category: 'product_interaction',
                         event_label: item.title,
                         item_name: item.title,
-                        item_brand: item.brand || 'unknown',
-                        item_category: item.category || 'unknown',
+                        item_category: firstCategory,
                         platform: 'tiktok',
                         link_url: item.links.tiktok
                       });
@@ -109,12 +114,12 @@ export default function Modal({ open, onClose, item, copied, onCopy }) {
                   rel="noreferrer" 
                   onClick={() => {
                     if (window.gtag) {
+                      const firstCategory = Array.isArray(item.category) ? item.category[0] : (item.category || 'unknown');
                       window.gtag('event', 'click_product_link', {
                         event_category: 'product_interaction',
                         event_label: item.title,
                         item_name: item.title,
-                        item_brand: item.brand || 'unknown',
-                        item_category: item.category || 'unknown',
+                        item_category: firstCategory,
                         platform: 'lazada',
                         link_url: item.links.lazada
                       });
@@ -137,12 +142,12 @@ export default function Modal({ open, onClose, item, copied, onCopy }) {
                   rel="noreferrer" 
                   onClick={() => {
                     if (window.gtag) {
+                      const firstCategory = Array.isArray(item.category) ? item.category[0] : (item.category || 'unknown');
                       window.gtag('event', 'click_product_link', {
                         event_category: 'product_interaction',
                         event_label: item.title,
                         item_name: item.title,
-                        item_brand: item.brand || 'unknown',
-                        item_category: item.category || 'unknown',
+                        item_category: firstCategory,
                         platform: 'other',
                         link_url: item.links.other
                       });
