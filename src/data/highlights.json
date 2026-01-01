@@ -2,7 +2,6 @@
   "highlights": [
     {
       "title": "Parametric",
-      "subtitle": "Womier Keycap Set",
       "brand": "womier",
       "img": "assets/products/womier-parametric-keycap.png",
       "tag": "",
@@ -17,7 +16,6 @@
     },
     {
       "title": "Torras - Ostand Q3 Air",
-      "subtitle": "",
       "brand": "torras",
       "img": "assets/products/torras-ostand-q3-air.png",
       "tag": "",
@@ -32,9 +30,9 @@
     },
     {
       "title": "Qubii duo",
-      "subtitle": "automatic backup cube",
+      "category": ["gadgets"],
       "brand": "maktar",
-      "img": "assets/products/qubii-duo.png",
+      "img": "assets/products/maktar-qubii-duo.png",
       "tag": "",
       "description": "",
       "code": "",

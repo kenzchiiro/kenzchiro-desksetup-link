@@ -295,6 +295,34 @@
       }
     },
     {
+      "title": "Logitech MX Master 3",
+      "category": ["mouse"],
+      "brand": "logitech",
+      "img": "assets/products/logitech-mx-master-3.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/6VHHImzk3m",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "Ajazz AJ159 APEX",
+      "category": ["mouse"],
+      "brand": "ajazz",
+      "img": "assets/products/ajazz-aj159-apex.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "",
+        "tiktok": "https://vt.tiktok.com/ZSHs48M25tyXJ-fIjIR/",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
       "title": "ZTEC ZMO1316",
       "category": ["mouse"],
       "brand": "ztec",
@@ -416,6 +444,342 @@
       "links": {
         "shopee": "https://s.shopee.co.th/7ANj1BVODm",
         "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "Desk Stand",
+      "category": ["setup"],
+      "brand": "",
+      "img": "assets/products/diy-desk-stand.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/1VrZRomPCr",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "Picture Frame",
+      "category": ["setup"],
+      "brand": "",
+      "img": "assets/products/picture-frame.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/AUjPlfRfuu",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "Stand",
+      "category": ["setup"],
+      "brand": "",
+      "img": "assets/products/stand.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/3LEUC6cTtC",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "Fifine BM88",
+      "category": ["setup"],
+      "brand": "",
+      "img": "assets/products/fifine-bm88.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/9KWU5mTDSH",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "Ergotrend Monitor Arm Robot 01 RGB",
+      "category": ["setup"],
+      "brand": "",
+      "img": "assets/products/ergotrend-monitor-arm-robot-01-rgb.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/7Kjih8VLSy",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "Xiaomi Monitor LightBar",
+      "category": ["setup"],
+      "brand": "",
+      "img": "assets/products/xiaomi-monitor-lightbar.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/9ABiBze4cD",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "Table Bewell",
+      "category": ["setup"],
+      "brand": "",
+      "img": "assets/products/table-bewell.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/6pkjOmRaXB",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "Bewell FROZEN",
+      "category": ["setup"],
+      "brand": "",
+      "img": "assets/products/bewell-frozen.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/4fgEp0qW0H",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "Board Decorations",
+      "category": ["setup"],
+      "brand": "",
+      "img": "assets/products/board-decorations.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/8UolJeS6PD",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "Picture frame PS2 controller",
+      "category": ["setup"],
+      "brand": "",
+      "img": "assets/products/picture-frame-ps2-controller.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/9UpN1Ce6AG",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "Skadis Pegboard",
+      "category": ["setup"],
+      "brand": "",
+      "img": "assets/products/skadis-pegboard.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/7AJNj2OV2A",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "Fifine K688",
+      "category": ["microphone"],
+      "brand": "",
+      "img": "assets/products/fifine-k688.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "https://link.fifinedesign.com/K688-kenzchiro",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "FIFINE AM8",
+      "category": ["microphone"],
+      "brand": "",
+      "img": "assets/products/fifine-am8.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/VthHOE3W6",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "Maono dm40",
+      "category": ["microphone"],
+      "brand": "",
+      "img": "assets/products/maono-dm40.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/4q3eEpaygV",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "Comica Ejoy Uni Pro",
+      "category": ["microphone"],
+      "brand": "",
+      "img": "assets/products/comica-ejoy-uni-pro.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/AUj74HtRdO",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "Boya Magic Mic 4 in 1",
+      "category": ["microphone"],
+      "brand": "",
+      "img": "assets/products/boya-magic-mic-4-in-1.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "",
+        "tiktok": "https://vt.tiktok.com/ZSD37YrM3/",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "Maono T1 Mini",
+      "category": ["microphone"],
+      "brand": "",
+      "img": "assets/products/maono-t1-mini.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "",
+        "tiktok": "https://vt.tiktok.com/ZSD3WH6J5/",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "Xiaomi Sound party",
+      "category": ["headphone"],
+      "brand": "",
+      "img": "assets/products/xiaomi-sound-party.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "",
+        "tiktok": "https://vt.tiktok.com/ZSDcMJcCB/",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "Kanto Ora",
+      "category": ["headphone"],
+      "brand": "",
+      "img": "assets/products/kanto-ora.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "",
+        "tiktok": "https://vt.tiktok.com/ZSHWEwtKY8JpS-CC7qa/",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "1HORA AUT202",
+      "category": ["headphone"],
+      "brand": "",
+      "img": "assets/products/1hora-aut202.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "",
+        "tiktok": "https://vt.tiktok.com/ZSUeeVr8M/",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "CORSAIR HEADSET HS80 WIRELESS",
+      "category": ["headphone"],
+      "brand": "",
+      "img": "assets/products/corsair-headset.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/2fza46vuy5",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "SADES 703",
+      "category": ["headphone"],
+      "brand": "",
+      "img": "assets/products/sades-703.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/5L1n0TNnl8",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "iSuper Sound Pro Air",
+      "category": ["headphone"],
+      "brand": "",
+      "img": "assets/products/isuper-soundpro-air.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "",
+        "tiktok": "https://vt.tiktok.com/ZSHGa5stNWe62-0Ex4L/",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "Soundcore AeroClip",
+      "category": ["headphone"],
+      "brand": "",
+      "img": "assets/products/soundcore-aeroclip.png",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "",
+        "tiktok": "https://vt.tiktok.com/ZSDT1V1P4/",
         "lazada": "",
         "other": ""
       }

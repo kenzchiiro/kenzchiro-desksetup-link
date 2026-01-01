@@ -66,11 +66,14 @@
 }
 .highlight-tag{
   position:absolute;
-  top:11px;
-  left:11px;
+  top:0;
+  left:0;
+  display:flex;
+  align-items:center;
+  gap:4px;
   background:rgba(255,255,255,0.95);
   padding:5px 10px;
-  border-radius:5px;
+  border-radius:0 0 8px 0;
   font-size:9px;
   font-weight:600;
   color:#333;
@@ -78,18 +81,10 @@
   letter-spacing:0.5px;
   z-index:2;
 }
-.highlight-desc{
-  position:absolute;
-  bottom:11px;
-  left:11px;
-  right:11px;
-  background:rgba(255,255,255,0.95);
-  padding:6px 10px;
-  border-radius:5px;
-  font-size:10px;
+.highlight-pin-icon{
+  width:14px;
+  height:14px;
   color:#333;
-  text-align:center;
-  z-index:2;
 }
 .highlight-content{
   padding:13px;
@@ -97,27 +92,15 @@
   text-align:center;
 }
 .highlight-title{
-  font-size:13px;
+  font-size:11px;
   font-weight:700;
   color:var(--text);
-  margin:0 0 4px;
-}
-.highlight-subtitle{
-  font-size:10px;
-  color:var(--muted);
   margin:0;
-  font-weight:500;
 }
 
 @media (max-width:800px){
   .highlight-card{
     flex:0 0 calc(26.88% - 9px);
-  }
-  .highlight-title{
-    font-size:15px;
-  }
-  .highlight-subtitle{
-    font-size:12px;
   }
 }
 
@@ -141,26 +124,18 @@
     border-radius:12px;
   }
   .highlight-tag{
-    top:10px;
-    left:10px;
-    padding:4px 10px;
-    font-size:10px;
+    top:0;
+    left:0;
+    padding:4px 8px;
+    font-size:8px;
+    gap:3px;
+    border-radius:0 0 6px 0;
   }
-  .highlight-desc{
-    bottom:10px;
-    left:10px;
-    right:10px;
-    padding:6px 10px;
-    font-size:11px;
+  .highlight-pin-icon{
+    width:12px;
+    height:12px;
   }
   .highlight-content{
     padding:10px;
-  }
-  .highlight-title{
-    font-size:15px;
-    margin-bottom:2px;
-  }
-  .highlight-subtitle{
-    font-size:12px;
   }
 }
