@@ -46,7 +46,7 @@ export default function Highlight() {
                   {item.tag}
                 </div>
               )}
-              <img src={item.img} alt={item.title} className="highlight-image" />
+              <img src={item.img} alt={item.title} className="highlight-image" loading="lazy" />
             </div>
             <div className="highlight-content">
               <h3 className="highlight-title">{item.title}</h3>

@@ -18,6 +18,7 @@ export default function Header() {
               className="avatar"
               alt="avatar"
               src={profile.avatar}
+              loading="lazy"
             />
           </div>
         </div>
@@ -29,7 +30,7 @@ export default function Header() {
             <div className="socials" aria-label="social links">
               {profile.socials.map((social) => (
                 <a key={social.id} className="social" href={social.url} aria-label={social.ariaLabel} target="_blank" rel="noopener noreferrer">
-                  <img src={social.icon} alt={social.name} className="social-icon" />
+                  <img src={social.icon} alt={social.name} className="social-icon" loading="lazy" />
                 </a>
               ))}
             </div>
@@ -41,7 +42,7 @@ export default function Header() {
         {contacts.map((contact) => (
           <a key={contact.id} className="contact-card" href={contact.url} role="button" target="_blank" rel="noopener noreferrer">
             <div className="contact-icon">
-              <img src={contact.icon} alt={contact.title} />
+              <img src={contact.icon} alt={contact.title} loading="lazy" />
             </div>
             <div className="contact-body">
               <div className="contact-title">{contact.title}</div>

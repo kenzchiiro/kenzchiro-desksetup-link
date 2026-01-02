@@ -1,8 +1,20 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Modal.css'
 
 export default function Modal({ open, onClose, item, copied, onCopy }) {
   const [selectedItem, setSelectedItem] = useState(null)
+  
+  // Lock body scroll when modal is open
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [open])
   
   if (!open || !item) return null
 
@@ -24,6 +36,24 @@ export default function Modal({ open, onClose, item, copied, onCopy }) {
     onClose()
   }
 
+  const trackProductClick = (itemTitle, category, platform, url) => {
+    const eventData = {
+      event: 'select_item',
+      event_category: 'product_interaction',
+      event_label: itemTitle,
+      item_name: itemTitle,
+      item_category: category,
+      platform: platform,
+      link_url: url
+    }
+    if (window.dataLayer) {
+      window.dataLayer.push(eventData)
+    }
+    if (window.gtag) {
+      window.gtag('event', 'select_item', eventData)
+    }
+  }
+
   return (
     <div className="modal-backdrop" onClick={handleClose}>
       <div className="modal modal-flat" onClick={(e) => e.stopPropagation()}>
@@ -41,7 +71,7 @@ export default function Modal({ open, onClose, item, copied, onCopy }) {
             <div className="modal-group-left">
               {(item.img || (item.group_items && item.group_items[0]?.img)) && (
                 <div className="modal-group-image-wrapper">
-                  <img src={item.img || item.group_items[0]?.img} alt={item.title} className="modal-group-image" />
+                  <img src={item.img || item.group_items[0]?.img} alt={item.title} className="modal-group-image" loading="lazy" />
                 </div>
               )}
             </div>
@@ -61,7 +91,7 @@ export default function Modal({ open, onClose, item, copied, onCopy }) {
                   >
                     {groupItem.img && (
                       <div className="group-item-image">
-                        <img src={groupItem.img} alt={groupItem.title} />
+                        <img src={groupItem.img} alt={groupItem.title} loading="lazy" />
                       </div>
                     )}
                     <div className="group-item-info">
@@ -85,7 +115,7 @@ export default function Modal({ open, onClose, item, copied, onCopy }) {
           <div className="modal-content">
             {displayItem.img && (
               <div className="modal-image-wrapper">
-                <img src={displayItem.img} alt={displayItem.title} className="modal-image" />
+                <img src={displayItem.img} alt={displayItem.title} className="modal-image" loading="lazy" />
                 {(displayItem.brand || displayItem.category) && (
                   <div className="modal-category-overlay">
                     {displayItem.brand && <span className="modal-category-chip">{displayItem.brand}</span>}
@@ -130,17 +160,8 @@ export default function Modal({ open, onClose, item, copied, onCopy }) {
                     target="_blank" 
                     rel="noreferrer" 
                     onClick={() => {
-                      if (window.gtag) {
-                        const firstCategory = Array.isArray(displayItem.category) ? displayItem.category[0] : (displayItem.category || 'unknown');
-                        window.gtag('event', 'click_product_link', {
-                          event_category: 'product_interaction',
-                          event_label: displayItem.title,
-                          item_name: displayItem.title,
-                          item_category: firstCategory,
-                          platform: 'shopee',
-                          link_url: displayItem.links.shopee
-                        });
-                      }
+                      const firstCategory = Array.isArray(displayItem.category) ? displayItem.category[0] : (displayItem.category || 'unknown');
+                      trackProductClick(displayItem.title, firstCategory, 'shopee', displayItem.links.shopee);
                       handleClose();
                     }}
                   >
@@ -158,17 +179,8 @@ export default function Modal({ open, onClose, item, copied, onCopy }) {
                     target="_blank" 
                     rel="noreferrer" 
                     onClick={() => {
-                      if (window.gtag) {
-                        const firstCategory = Array.isArray(displayItem.category) ? displayItem.category[0] : (displayItem.category || 'unknown');
-                        window.gtag('event', 'click_product_link', {
-                          event_category: 'product_interaction',
-                          event_label: displayItem.title,
-                          item_name: displayItem.title,
-                          item_category: firstCategory,
-                          platform: 'tiktok',
-                          link_url: displayItem.links.tiktok
-                        });
-                      }
+                      const firstCategory = Array.isArray(displayItem.category) ? displayItem.category[0] : (displayItem.category || 'unknown');
+                      trackProductClick(displayItem.title, firstCategory, 'tiktok', displayItem.links.tiktok);
                       handleClose();
                     }}
                   >
@@ -186,17 +198,8 @@ export default function Modal({ open, onClose, item, copied, onCopy }) {
                     target="_blank" 
                     rel="noreferrer" 
                     onClick={() => {
-                      if (window.gtag) {
-                        const firstCategory = Array.isArray(displayItem.category) ? displayItem.category[0] : (displayItem.category || 'unknown');
-                        window.gtag('event', 'click_product_link', {
-                          event_category: 'product_interaction',
-                          event_label: displayItem.title,
-                          item_name: displayItem.title,
-                          item_category: firstCategory,
-                          platform: 'lazada',
-                          link_url: displayItem.links.lazada
-                        });
-                      }
+                      const firstCategory = Array.isArray(displayItem.category) ? displayItem.category[0] : (displayItem.category || 'unknown');
+                      trackProductClick(displayItem.title, firstCategory, 'lazada', displayItem.links.lazada);
                       handleClose();
                     }}
                   >
@@ -214,17 +217,8 @@ export default function Modal({ open, onClose, item, copied, onCopy }) {
                     target="_blank" 
                     rel="noreferrer" 
                     onClick={() => {
-                      if (window.gtag) {
-                        const firstCategory = Array.isArray(displayItem.category) ? displayItem.category[0] : (displayItem.category || 'unknown');
-                        window.gtag('event', 'click_product_link', {
-                          event_category: 'product_interaction',
-                          event_label: displayItem.title,
-                          item_name: displayItem.title,
-                          item_category: firstCategory,
-                          platform: 'other',
-                          link_url: displayItem.links.other
-                        });
-                      }
+                      const firstCategory = Array.isArray(displayItem.category) ? displayItem.category[0] : (displayItem.category || 'unknown');
+                      trackProductClick(displayItem.title, firstCategory, 'other', displayItem.links.other);
                       handleClose();
                     }}
                   >

@@ -31,6 +31,24 @@ export default function Contents() {
     }
   }
 
+  const trackProductClick = (itemTitle, category, platform, url) => {
+    const eventData = {
+      event: 'select_item',
+      event_category: 'product_interaction',
+      event_label: itemTitle,
+      item_name: itemTitle,
+      item_category: category,
+      platform: platform,
+      link_url: url
+    }
+    if (window.dataLayer) {
+      window.dataLayer.push(eventData)
+    }
+    if (window.gtag) {
+      window.gtag('event', 'select_item', eventData)
+    }
+  }
+
   const categories = useMemo(() => {
     const allCategories = []
     ITEMS.forEach((i) => {
@@ -101,7 +119,7 @@ export default function Contents() {
               {items.map((item, index) => (
                 <article key={`${category}-${index}`} className="card" onClick={() => { setModalItem(item); setModalOpen(true) }}>
                   <div className="card-media">
-                    <img src={item.img} alt={item.title} />
+                    <img src={item.img} alt={item.title} loading="lazy" />
                   </div>
                   {/* <div className="card-body">
                     <h3>{item.title}</h3>
@@ -138,18 +156,8 @@ export default function Contents() {
 
             <div className="channel-grid">
               <a className="channel" href={modalItem.links?.shopee || `https://shopee.co.th/search?keyword=${encodeURIComponent(modalItem.title)}`} target="_blank" rel="noreferrer" onClick={(e) => {
-                const actualUrl = e.currentTarget.href;
-                if (window.gtag) {
-                  const firstCategory = Array.isArray(modalItem.category) ? modalItem.category[0] : (modalItem.category || 'unknown');
-                  window.gtag('event', 'click_product_link', {
-                    event_category: 'product_interaction',
-                    event_label: modalItem.title,
-                    item_name: modalItem.title,
-                    item_category: firstCategory,
-                    platform: 'shopee',
-                    link_url: actualUrl
-                  });
-                }
+                const firstCategory = Array.isArray(modalItem.category) ? modalItem.category[0] : (modalItem.category || 'unknown');
+                trackProductClick(modalItem.title, firstCategory, 'shopee', e.currentTarget.href);
                 setModalOpen(false);
               }}>
                 <div className="ch-icon shopee">
@@ -159,18 +167,8 @@ export default function Contents() {
               </a>
 
               <a className="channel" href={modalItem.links?.tiktok || `https://www.tiktok.com/search?q=${encodeURIComponent(modalItem.title)}`} target="_blank" rel="noreferrer" onClick={(e) => {
-                const actualUrl = e.currentTarget.href;
-                if (window.gtag) {
-                  const firstCategory = Array.isArray(modalItem.category) ? modalItem.category[0] : (modalItem.category || 'unknown');
-                  window.gtag('event', 'click_product_link', {
-                    event_category: 'product_interaction',
-                    event_label: modalItem.title,
-                    item_name: modalItem.title,
-                    item_category: firstCategory,
-                    platform: 'tiktok',
-                    link_url: actualUrl
-                  });
-                }
+                const firstCategory = Array.isArray(modalItem.category) ? modalItem.category[0] : (modalItem.category || 'unknown');
+                trackProductClick(modalItem.title, firstCategory, 'tiktok', e.currentTarget.href);
                 setModalOpen(false);
               }}>
                 <div className="ch-icon tiktok">
@@ -180,18 +178,8 @@ export default function Contents() {
               </a>
 
               <a className="channel" href={modalItem.links?.lazada || `https://www.lazada.co.th/catalog/?q=${encodeURIComponent(modalItem.title)}`} target="_blank" rel="noreferrer" onClick={(e) => {
-                const actualUrl = e.currentTarget.href;
-                if (window.gtag) {
-                  const firstCategory = Array.isArray(modalItem.category) ? modalItem.category[0] : (modalItem.category || 'unknown');
-                  window.gtag('event', 'click_product_link', {
-                    event_category: 'product_interaction',
-                    event_label: modalItem.title,
-                    item_name: modalItem.title,
-                    item_category: firstCategory,
-                    platform: 'lazada',
-                    link_url: actualUrl
-                  });
-                }
+                const firstCategory = Array.isArray(modalItem.category) ? modalItem.category[0] : (modalItem.category || 'unknown');
+                trackProductClick(modalItem.title, firstCategory, 'lazada', e.currentTarget.href);
                 setModalOpen(false);
               }}>
                 <div className="ch-icon lazada">
@@ -202,18 +190,8 @@ export default function Contents() {
 
               {modalItem.links?.other && (
                 <a className="channel" href={modalItem.links.other} target="_blank" rel="noreferrer" onClick={(e) => {
-                  const actualUrl = e.currentTarget.href;
-                  if (window.gtag) {
-                    const firstCategory = Array.isArray(modalItem.category) ? modalItem.category[0] : (modalItem.category || 'unknown');
-                    window.gtag('event', 'click_product_link', {
-                      event_category: 'product_interaction',
-                      event_label: modalItem.title,
-                      item_name: modalItem.title,
-                      item_category: firstCategory,
-                      platform: 'other',
-                      link_url: actualUrl
-                    });
-                  }
+                  const firstCategory = Array.isArray(modalItem.category) ? modalItem.category[0] : (modalItem.category || 'unknown');
+                  trackProductClick(modalItem.title, firstCategory, 'other', e.currentTarget.href);
                   setModalOpen(false);
                 }}>
                   <div className="ch-icon other">
