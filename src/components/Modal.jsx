@@ -151,7 +151,7 @@ export default function Modal({ open, onClose, item, copied, onCopy }) {
             )}
 
             <div className="channel-grid">
-              <p className="modal-sub">Order the way that's easiest for you.</p>
+              <p className="modal-sub">Available on</p>
               <div className="channel-links">
                 {displayItem.links?.shopee && (
                   <a 
