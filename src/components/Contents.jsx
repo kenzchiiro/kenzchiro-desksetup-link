@@ -31,24 +31,6 @@ export default function Contents() {
     }
   }
 
-  const trackProductClick = (itemTitle, category, platform, url) => {
-    const eventData = {
-      event: 'select_item',
-      event_category: 'product_interaction',
-      event_label: itemTitle,
-      item_name: itemTitle,
-      item_category: category,
-      platform: platform,
-      link_url: url
-    }
-    if (window.dataLayer) {
-      window.dataLayer.push(eventData)
-    }
-    if (window.gtag) {
-      window.gtag('event', 'select_item', eventData)
-    }
-  }
-
   const categories = useMemo(() => {
     const allCategories = []
     ITEMS.forEach((i) => {
@@ -121,10 +103,6 @@ export default function Contents() {
                   <div className="card-media">
                     <img src={item.img} alt={item.title} loading="lazy" />
                   </div>
-                  {/* <div className="card-body">
-                    <h3>{item.title}</h3>
-                    <p className="cat">{item.category}</p>
-                  </div> */}
                 </article>
               ))}
             </div>
@@ -132,85 +110,12 @@ export default function Contents() {
         ))}
       </div>
 
-      {modalOpen && modalItem && (
-        <div className="modal-backdrop" onClick={() => setModalOpen(false)}>
-          <div className="modal modal-flat" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close" onClick={() => setModalOpen(false)} aria-label="Close">×</button>
-            <h2 className="modal-title">{modalItem.title}</h2>
-
-            {modalItem.description && <p className="modal-desc">{modalItem.description}</p>}
-            <br/>
-
-            {modalItem.code && (
-              <div className="modal-code">
-                <div className="code-label">Discount code</div>
-                <div className="code-row">
-                  <div className="code-box">{modalItem.code}</div>
-                  <button className={`copy-btn ${copied ? 'copied' : ''}`} onClick={(e) => { e.stopPropagation(); copyCode(modalItem.code) }} aria-label="Copy code">{copied ? 'COPIED' : 'COPY'}</button>
-                </div>
-              </div>
-            )}
-                        <br/>
-
-            <p className="modal-sub">Order the way that’s easiest for you.</p>
-
-            <div className="channel-grid">
-              <a className="channel" href={modalItem.links?.shopee || `https://shopee.co.th/search?keyword=${encodeURIComponent(modalItem.title)}`} target="_blank" rel="noreferrer" onClick={(e) => {
-                const firstCategory = Array.isArray(modalItem.category) ? modalItem.category[0] : (modalItem.category || 'unknown');
-                trackProductClick(modalItem.title, firstCategory, 'shopee', e.currentTarget.href);
-                setModalOpen(false);
-              }}>
-                <div className="ch-icon shopee">
-                  <img src="assets/icon-shopee.svg" alt="Shopee" />
-                </div>
-                <div className="ch-label">Shopee</div>
-              </a>
-
-              <a className="channel" href={modalItem.links?.tiktok || `https://www.tiktok.com/search?q=${encodeURIComponent(modalItem.title)}`} target="_blank" rel="noreferrer" onClick={(e) => {
-                const firstCategory = Array.isArray(modalItem.category) ? modalItem.category[0] : (modalItem.category || 'unknown');
-                trackProductClick(modalItem.title, firstCategory, 'tiktok', e.currentTarget.href);
-                setModalOpen(false);
-              }}>
-                <div className="ch-icon tiktok">
-                  <img src="assets/icon-tiktok.svg" alt="TikTok" />
-                </div>
-                <div className="ch-label">TikTok</div>
-              </a>
-
-              <a className="channel" href={modalItem.links?.lazada || `https://www.lazada.co.th/catalog/?q=${encodeURIComponent(modalItem.title)}`} target="_blank" rel="noreferrer" onClick={(e) => {
-                const firstCategory = Array.isArray(modalItem.category) ? modalItem.category[0] : (modalItem.category || 'unknown');
-                trackProductClick(modalItem.title, firstCategory, 'lazada', e.currentTarget.href);
-                setModalOpen(false);
-              }}>
-                <div className="ch-icon lazada">
-                  <img src="assets/icon-lazada.svg" alt="Lazada" />
-                </div>
-                <div className="ch-label">Lazada</div>
-              </a>
-
-              {modalItem.links?.other && (
-                <a className="channel" href={modalItem.links.other} target="_blank" rel="noreferrer" onClick={(e) => {
-                  const firstCategory = Array.isArray(modalItem.category) ? modalItem.category[0] : (modalItem.category || 'unknown');
-                  trackProductClick(modalItem.title, firstCategory, 'other', e.currentTarget.href);
-                  setModalOpen(false);
-                }}>
-                  <div className="ch-icon other">
-                  <img src="assets/icon-external-link.svg" alt="Other" />
-                  </div>
-                  <div className="ch-label">Other</div>
-                </a>
-              )}
-            </div>
-          </div>
-        </div>
-      )}
-
       <Modal 
         open={modalOpen} 
         onClose={() => setModalOpen(false)} 
         item={modalItem} 
         copied={copied} 
-        onCopy={copyCode} 
+        onCopy={copyCode}
       />
     </section>
   )

@@ -37,20 +37,17 @@ export default function Modal({ open, onClose, item, copied, onCopy }) {
   }
 
   const trackProductClick = (itemTitle, category, platform, url) => {
-    const eventData = {
-      event: 'select_item',
-      event_category: 'product_interaction',
-      event_label: itemTitle,
-      item_name: itemTitle,
-      item_category: category,
-      platform: platform,
-      link_url: url
-    }
+    // Use Google Tag Manager (GTM handles both GTM and GA4)
     if (window.dataLayer) {
-      window.dataLayer.push(eventData)
-    }
-    if (window.gtag) {
-      window.gtag('event', 'select_item', eventData)
+      window.dataLayer.push({
+        event: 'select_item',
+        event_category: 'product_interaction',
+        event_label: itemTitle,
+        item_name: itemTitle,
+        item_category: category,
+        platform: platform,
+        link_url: url
+      })
     }
   }
 

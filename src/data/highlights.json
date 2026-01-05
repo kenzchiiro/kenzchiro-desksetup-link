@@ -2,6 +2,7 @@
   "highlights": [
     {
       "title": "Parametric",
+      "category": ["keycap"],
       "brand": "womier",
       "img": "assets/products/womier-parametric-keycap.png",
       "tag": " ",
@@ -16,6 +17,7 @@
     },
     {
       "title": "Torras - Ostand Q3 Air",
+      "category": ["iphone accessory"],
       "brand": "torras",
       "img": "assets/products/torras-ostand-q3-air.png",
       "tag": " ",
