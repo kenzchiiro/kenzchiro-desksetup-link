@@ -89,7 +89,7 @@
       "category": ["neo","gadgets"],
       "brand": "elgato",
       "img": "assets/products/elgato-capture-card-neo.png",
-      "description": "Mechanical gaming keyboard with Razer Green switches, command dial, and per-key RGB lighting.",
+      "description": "",
       "code": "",
       "links": {
         "shopee": "https://s.shopee.co.th/9pXhHcxuZ2",
@@ -109,6 +109,20 @@
         "shopee": "https://s.shopee.co.th/8KitV1zRdc",
         "tiktok": "https://vt.tiktok.com/ZSHEdExtBHKTk-FilJI/",
         "lazada": "https://s.lazada.co.th/s.Zb96Sc",
+        "other": ""
+      }
+    },
+    {
+      "title": "Saru Space - Reptilian KX78 HE",
+      "category": ["keyboard"],
+      "brand": "Saru Space",
+      "img": "assets/products/saru-kx78he.jpg",
+      "description": "Gaming Magnetic Keyboard | Compact 75%| Hot-Swappable | Hall Effect | 8K Polling Rate | Rapid trigger 0.01mm | Tri-mode Connection",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/806LteAKoG",
+        "tiktok": "",
+        "lazada": "",
         "other": ""
       }
     },
@@ -449,6 +463,20 @@
       }
     },
     {
+      "title": "Ergonoz - Pyroz",
+      "category": ["setup"],
+      "brand": "ergonoz",
+      "img": "assets/products/ergonoz-pyroz.jpg",
+      "description": "Ergonoz Monitor Arm | 17\"-32\" | 2-9 kg | VESA 75x75mm / 100x100mm | Machanical Spring | Cable Management",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/9pY054fbTY",
+        "tiktok": "https://vt.tiktok.com/ZSHoJYDy5VL2T-rjnVP/",
+        "lazada": "https://s.lazada.co.th/s.ZbE5nc",
+        "other": ""
+      }
+    },
+    {
       "title": "Desk Stand",
       "category": ["setup"],
       "brand": "",
@@ -499,20 +527,6 @@
       "code": "",
       "links": {
         "shopee": "https://s.shopee.co.th/9KWU5mTDSH",
-        "tiktok": "",
-        "lazada": "",
-        "other": ""
-      }
-    },
-    {
-      "title": "Ergotrend Monitor Arm Robot 01 RGB",
-      "category": ["setup"],
-      "brand": "",
-      "img": "assets/products/ergotrend-monitor-arm-robot-01-rgb.png",
-      "description": "",
-      "code": "",
-      "links": {
-        "shopee": "https://s.shopee.co.th/7Kjih8VLSy",
         "tiktok": "",
         "lazada": "",
         "other": ""

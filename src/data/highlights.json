@@ -1,6 +1,21 @@
 {
   "highlights": [
     {
+      "title": "Reptilian KX78 HE",
+      "category": ["keyboard"],
+      "brand": "Saru Space",
+      "img": "assets/products/saru-kx78he.jpg",
+      "tag": "new",
+      "description": "Gaming Magnetic Keyboard | Compact 75%| Hot-Swappable | Hall Effect | 8K Polling Rate | Rapid trigger 0.01mm | Tri-mode Connection",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/806LteAKoG",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
       "title": "Parametric",
       "category": ["keycap"],
       "brand": "womier",
