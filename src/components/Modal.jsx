@@ -127,8 +127,8 @@ export default function Modal({ open, onClose, item, copied, onCopy }) {
             <div className="modal-body">
               <h2 className="modal-title">{displayItem.title}</h2>
 
-              {(displayItem.subtitle || displayItem.description) && (
-                <p className="modal-desc">{displayItem.subtitle || displayItem.description}</p>
+              {(displayItem.description || displayItem.subtitle) && (
+                <p className="modal-desc">{displayItem.description || displayItem.subtitle}</p>
               )}
 
               {displayItem.code && (

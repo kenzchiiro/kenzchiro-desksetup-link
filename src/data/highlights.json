@@ -75,7 +75,7 @@
           "category": ["pc","case"],
           "brand": "formd",
           "img": "assets/pc/case.png",
-          "description": "Case for Mini ITX Build",
+          "description": "9.95L SFF case | A4 paper-sized footprint | AIO support | CNC machined aluminum | Premium anodizing",
           "links": {
             "shopee": "https://s.shopee.co.th/2AytqlipMP",
             "tiktok": "",
@@ -89,7 +89,7 @@
           "category": ["pc","mainboard"],
           "brand": "aorus",
           "img": "assets/pc/mainboard.png",
-          "description": "Mainboard for Mini ITX Build",
+          "description": "AMD X870I chipset | 8+2+1 phase VRM | DDR5 8400+ MT/s | PCIe 5.0 x16 | 2x M.2 (PCIe 5.0/4.0) | USB4 40Gbps | WiFi 7 | 2.5GbE LAN",
           "links": {
             "shopee": "https://s.shopee.co.th/3VXMhtMcGp",
             "tiktok": "",
@@ -103,7 +103,7 @@
           "category": ["pc","cpu"],
           "brand": "amd",
           "img": "assets/pc/cpu.png",
-          "description": "CPU for Mini ITX Build",
+          "description": "8 cores 16 threads | Up to 5.0 GHz boost | 96MB 3D V-Cache | Zen 4 architecture | 120W TDP | Dominant gaming processor",
           "links": {
             "shopee": "https://s.shopee.co.th/4VPq3hwj9U",
             "tiktok": "",
@@ -117,7 +117,7 @@
           "category": ["pc","cpu cooler"],
           "brand": "cooler master",
           "img": "assets/pc/cpu-cooler.png",
-          "description": "CPU Cooler for Mini ITX Build",
+          "description": "240mm AIO liquid cooler | LCD screen display | Dual 120mm fans | Optimized for high-end CPUs | Silent operation",
           "links": {
             "shopee": "https://s.shopee.co.th/AKUKaclio3",
             "tiktok": "",
@@ -131,7 +131,7 @@
           "category": ["pc","monitor"],
           "brand": "msi",
           "img": "assets/pc/monitor.png",
-          "description": "Gaming Monitor 127\" IPS 2K 180Hz for Mini ITX Build",
+          "description": "27\" IPS panel | 2560x1440 (2K) | 180Hz refresh rate | Rapid IPS 1ms response | HDR support | Gaming features",
           "links": {
             "shopee": "https://s.shopee.co.th/1Vohpmfyfj",
             "tiktok": "",
