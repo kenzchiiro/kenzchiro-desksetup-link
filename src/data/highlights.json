@@ -15,12 +15,12 @@
         "other": ""
       }
     },
-        {
+    {
       "title": "Ergonoz - Pyroz",
       "category": ["setup"],
       "brand": "ergonoz",
       "img": "assets/products/ergonoz-pyroz.jpg",
-      "tag": " ",
+      "tag": "new",
       "description": "Ergonoz Monitor Arm | 17\"-32\" | 2-9 kg | VESA 75x75mm / 100x100mm | Machanical Spring | Cable Management",
       "code": "",
       "links": {
@@ -28,21 +28,6 @@
         "tiktok": "https://vt.tiktok.com/ZSHoJYDy5VL2T-rjnVP/",
         "lazada": "https://s.lazada.co.th/s.ZbE5nc",
         "other": ""
-      }
-    },
-    {
-      "title": "Parametric",
-      "category": ["keycap"],
-      "brand": "womier",
-      "img": "assets/products/womier-parametric-keycap.png",
-      "tag": " ",
-      "description": "",
-      "code": "",
-      "links": {
-        "shopee": "",
-        "tiktok": "",
-        "lazada": "",
-        "other": "https://womierkeyboard.com/products/womier-parametric-keycap-set?sca_ref=10149033.MaOc1663RR"
       }
     },
     {
@@ -74,6 +59,87 @@
         "lazada": "",
         "other": ""
       }
+    },
+    {
+      "title": "ITX Build",
+      "category": ["PC"],
+      "brand": "PC Build",
+      "img": "assets/pc/build.png",
+      "tag": "PC Build",
+      "description": "Monitor : MSI MAG 274QRFW - 27\" IPS 2K 180Hz\nCase: Formd T1 v2.1\nMainboard: Aorus X870i Pro Ice\nCPU: AMD Ryzen 7800X3D\nRAM: 16GB Team DDR5 5600MHz (x2)\nGPU: RTX 4070 super\nSSD: 1TB m.2 KINSTON KC3000\nPSU: Cooler Master SFX 850W\nCPU Cooler: Master Liquid Atmos 240",
+      "code": "",
+      "group_items": [
+        {
+          "title": " Formd T1 (mini ITX)",
+          "subtitle": "Case",
+          "category": ["pc","case"],
+          "brand": "formd",
+          "img": "assets/pc/case.png",
+          "description": "Case for Mini ITX Build",
+          "links": {
+            "shopee": "https://s.shopee.co.th/2AytqlipMP",
+            "tiktok": "",
+            "lazada": "",
+            "other": "https://formdt1.com/?srsltid=AfmBOoqru1hRu31Qvmv-Bl1yMeR3Ly9d5QGz91FZ37Ao1V1_Xk1P1T_v"
+          }
+        },
+        {
+          "title": "Aorus - X870I AORUS PRO ICE",
+          "subtitle": "mainboard",
+          "category": ["pc","mainboard"],
+          "brand": "aorus",
+          "img": "assets/pc/mainboard.png",
+          "description": "Mainboard for Mini ITX Build",
+          "links": {
+            "shopee": "https://s.shopee.co.th/3VXMhtMcGp",
+            "tiktok": "",
+            "lazada": "",
+            "other": "https://www.gigabyte.com/th/Motherboard/X870I-AORUS-PRO-ICE-rev-10"
+          }
+        },
+        {
+          "title": "AMD - Ryzen 7 7800X3D ",
+          "subtitle": "CPU",
+          "category": ["pc","cpu"],
+          "brand": "amd",
+          "img": "assets/pc/cpu.png",
+          "description": "CPU for Mini ITX Build",
+          "links": {
+            "shopee": "https://s.shopee.co.th/4VPq3hwj9U",
+            "tiktok": "",
+            "lazada": "",
+            "other": ""
+          }
+        },
+        {
+          "title": "Cooler Master - Master Liquid Atmos 240 ii - LCD",
+          "subtitle": "CPU Cooler",
+          "category": ["pc","cpu cooler"],
+          "brand": "cooler master",
+          "img": "assets/pc/cpu-cooler.png",
+          "description": "CPU Cooler for Mini ITX Build",
+          "links": {
+            "shopee": "https://s.shopee.co.th/AKUKaclio3",
+            "tiktok": "",
+            "lazada": "",
+            "other": ""
+          }
+        },
+        {
+          "title": "MSI MAG 274QRFW - 27\" IPS 2K 180Hz",
+          "subtitle": "Monitor",
+          "category": ["pc","monitor"],
+          "brand": "msi",
+          "img": "assets/pc/monitor.png",
+          "description": "Gaming Monitor 127\" IPS 2K 180Hz for Mini ITX Build",
+          "links": {
+            "shopee": "https://s.shopee.co.th/1Vohpmfyfj",
+            "tiktok": "",
+            "lazada": "",
+            "other": ""
+          }
+        }
+      ]
     }
   ]
 }
