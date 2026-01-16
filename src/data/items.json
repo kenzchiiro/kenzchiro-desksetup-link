@@ -1,116 +1,136 @@
 {
   "items": [
     {
-      "title": "Barracuda - Phantom White",
-      "category": ["phantom white","headset"],
+      "title": "Razer - Phantom White",
+      "category": ["collection"],
       "brand": "razer",
-      "img": "assets/products/razer-barracuda.png",
+      "img": "assets/products/collection-razer-phantom-white.jpg",
       "description": "",
       "code": "",
-      "links": {
-        "shopee": "https://s.shopee.co.th/30fsbEEnEC",
-        "tiktok": "",
-        "lazada": "",
-        "other": ""
-      }
+      "group_items": [
+        {
+          "title": "Barracuda - Phantom White",
+          "category": ["phantom white", "headset"],
+          "brand": "razer",
+          "img": "assets/products/razer-barracuda.png",
+          "description": "",
+          "code": "",
+          "links": {
+            "shopee": "https://s.shopee.co.th/30fsbEEnEC",
+            "tiktok": "",
+            "lazada": "",
+            "other": ""
+          }
+        },
+        {
+          "title": "Basilisk V3 Pro - Phantom White",
+          "category": ["phantom white", "mouse"],
+          "brand": "razer",
+          "img": "assets/products/razer-basilisk-v3-pro.png",
+          "description": "",
+          "code": "",
+          "links": {
+            "shopee": "https://s.shopee.co.th/50Qwyvp7GJ",
+            "tiktok": "",
+            "lazada": "",
+            "other": ""
+          }
+        },
+        {
+          "title": "Black Widow V4 - Phantom White",
+          "category": ["phantom white", "keyboard"],
+          "brand": "razer",
+          "img": "assets/products/razer-black-widow-v4.png",
+          "description": "",
+          "code": "",
+          "links": {
+            "shopee": "https://s.shopee.co.th/804YYWF7wO",
+            "tiktok": "",
+            "lazada": "",
+            "other": ""
+          }
+        },
+        {
+          "title": "Firefly V2 - Phantom White",
+          "category": ["phantom white", "mousepad"],
+          "brand": "razer",
+          "img": "assets/products/razer-firefly-v2.png",
+          "description": "",
+          "code": "",
+          "links": {
+            "shopee": "https://s.shopee.co.th/VyXcnSnNm",
+            "tiktok": "",
+            "lazada": "",
+            "other": ""
+          }
+        }
+      ]
     },
     {
-      "title": "Basilisk V3 Pro - Phantom White",
-      "category": ["phantom white","mouse"],
-      "brand": "razer",
-      "img": "assets/products/razer-basilisk-v3-pro.png",
-      "description": "",
-      "code": "",
-      "links": {
-        "shopee": "https://s.shopee.co.th/50Qwyvp7GJ",
-        "tiktok": "",
-        "lazada": "",
-        "other": ""
-      }
-    },
-    {
-      "title": "Black Widow V4 - Phantom White",
-      "category": ["phantom white","keyboard"],
-      "brand": "razer",
-      "img": "assets/products/razer-black-widow-v4.png",
-      "description": "",
-      "code": "",
-      "links": {
-        "shopee": "https://s.shopee.co.th/804YYWF7wO",
-        "tiktok": "",
-        "lazada": "",
-        "other": ""
-      }
-    },
-       {
-      "title": "Firefly V2 - Phantom White",
-      "category": ["phantom white","mousepad"],
-      "brand": "razer",
-      "img": "assets/products/razer-firefly-v2.png",
-      "description": "",
-      "code": "",
-      "links": {
-        "shopee": "https://s.shopee.co.th/VyXcnSnNm",
-        "tiktok": "",
-        "lazada": "",
-        "other": ""
-      }
-    },
-    {
-      "title": "Elgato - Wave Neo",
-      "category": ["neo","microphone"],
+      "title": "Elgato Neo",
+      "category": ["collection"],
       "brand": "elgato",
-      "img": "assets/products/elgato-wave-neo.png",
+      "img": "assets/products/collection-elgato-neo.jpg",
       "description": "",
       "code": "",
-      "links": {
-        "shopee": "https://s.shopee.co.th/1qVPklXv0u",
-        "tiktok": "https://vt.tiktok.com/ZSHEdExtBHKTk-FilJI/",
-        "lazada": "https://s.lazada.co.th/s.Zb96Sc",
-        "other": ""
-      }
-    },
-    {
-      "title": "Elgato - Stream Deck Neo",
-      "category": ["neo","gadgets"],
-      "brand": "elgato",
-      "img": "assets/products/elgato-stream-deck-neo.png",
-      "description": "",
-      "code": "",
-      "links": {
-        "shopee": "https://s.shopee.co.th/8KitUj73Dt",
-        "tiktok": "https://vt.tiktok.com/ZSHEdExtBHKTk-FilJI/",
-        "lazada": "https://s.lazada.co.th/s.Zb96Sc",
-        "other": ""
-      }
-    },
-    {
-      "title": "Elgato - Capture Card Neo",
-      "category": ["neo","gadgets"],
-      "brand": "elgato",
-      "img": "assets/products/elgato-capture-card-neo.png",
-      "description": "",
-      "code": "",
-      "links": {
-        "shopee": "https://s.shopee.co.th/9pXhHcxuZ2",
-        "tiktok": "https://vt.tiktok.com/ZSHEdExtBHKTk-FilJI/",
-        "lazada": "https://s.lazada.co.th/s.Zb96Sc",
-        "other": ""
-      }
-    },
-    {
-      "title": "Elgato - Facecam Neo",
-      "category": ["neo","webcam"],
-      "brand": "elgato",
-      "img": "assets/products/elgato-facecam-neo.png",
-      "description": "",
-      "code": "",
-      "links": {
-        "shopee": "https://s.shopee.co.th/8KitV1zRdc",
-        "tiktok": "https://vt.tiktok.com/ZSHEdExtBHKTk-FilJI/",
-        "lazada": "https://s.lazada.co.th/s.Zb96Sc",
-        "other": ""
-      }
+      "group_items": [
+        {
+          "title": "Elgato - Wave Neo",
+          "category": ["neo", "microphone"],
+          "brand": "elgato",
+          "img": "assets/products/elgato-wave-neo.png",
+          "description": "",
+          "code": "",
+          "links": {
+            "shopee": "https://s.shopee.co.th/1qVPklXv0u",
+            "tiktok": "https://vt.tiktok.com/ZSHEdExtBHKTk-FilJI/",
+            "lazada": "https://s.lazada.co.th/s.Zb96Sc",
+            "other": ""
+          }
+        },
+        {
+          "title": "Elgato - Stream Deck Neo",
+          "category": ["neo", "gadgets"],
+          "brand": "elgato",
+          "img": "assets/products/elgato-stream-deck-neo.png",
+          "description": "",
+          "code": "",
+          "links": {
+            "shopee": "https://s.shopee.co.th/8KitUj73Dt",
+            "tiktok": "https://vt.tiktok.com/ZSHEdExtBHKTk-FilJI/",
+            "lazada": "https://s.lazada.co.th/s.Zb96Sc",
+            "other": ""
+          }
+        },
+        {
+          "title": "Elgato - Capture Card Neo",
+          "category": ["neo", "gadgets"],
+          "brand": "elgato",
+          "img": "assets/products/elgato-capture-card-neo.png",
+          "description": "",
+          "code": "",
+          "links": {
+            "shopee": "https://s.shopee.co.th/9pXhHcxuZ2",
+            "tiktok": "https://vt.tiktok.com/ZSHEdExtBHKTk-FilJI/",
+            "lazada": "https://s.lazada.co.th/s.Zb96Sc",
+            "other": ""
+          }
+        },
+        {
+          "title": "Elgato - Facecam Neo",
+          "category": ["neo", "webcam"],
+          "brand": "elgato",
+          "img": "assets/products/elgato-facecam-neo.png",
+          "description": "",
+          "code": "",
+          "links": {
+            "shopee": "https://s.shopee.co.th/8KitV1zRdc",
+            "tiktok": "https://vt.tiktok.com/ZSHEdExtBHKTk-FilJI/",
+            "lazada": "https://s.lazada.co.th/s.Zb96Sc",
+            "other": ""
+          }
+        }
+      ]
     },
     {
       "title": "Saru Space - Reptilian KX78 HE",
@@ -338,7 +358,7 @@
     },
     {
       "title": "Orbitkey Desk Mat",
-      "category": ["mousepad","deskmat"],
+      "category": ["mousepad", "deskmat"],
       "brand": "orbitkey",
       "img": "assets/products/orbitkey-deskmat.png",
       "description": "",
@@ -366,7 +386,7 @@
     },
     {
       "title": "Divoom Tiivoo2",
-      "category": ["gadgets","speakers"],
+      "category": ["gadgets", "speakers"],
       "brand": "divoom",
       "img": "assets/products/divoom-tiivoo2.png",
       "description": "",
@@ -380,7 +400,7 @@
     },
     {
       "title": "Divoom Ditoo",
-      "category": ["gadgets","speakers"],
+      "category": ["gadgets", "speakers"],
       "brand": "divoom",
       "img": "assets/products/divoom-ditoo.png",
       "description": "",
@@ -394,7 +414,7 @@
     },
     {
       "title": "Vinko GaN K2002",
-      "category": ["gadgets","adapter"],
+      "category": ["gadgets", "adapter"],
       "brand": "vinko",
       "img": "assets/products/vinko-gan-k2002.png",
       "description": "Power Adapter 65W",
@@ -408,7 +428,7 @@
     },
     {
       "title": "Vinko V200",
-      "category": ["gadgets","powerbank"],
+      "category": ["gadgets", "powerbank"],
       "brand": "vinko",
       "img": "assets/products/vinko-v200.png",
       "description": "Power Bank 130W",
@@ -420,7 +440,7 @@
         "other": ""
       }
     },
-        {
+    {
       "title": "Ugreen Uno 6-in-1",
       "category": ["gadgets"],
       "brand": "ugreen",
