@@ -337,20 +337,6 @@
       }
     },
     {
-      "title": "ZTEC ZMO1316",
-      "category": ["mouse"],
-      "brand": "ztec",
-      "img": "assets/products/ztec-zmo1316.png",
-      "description": "",
-      "code": "",
-      "links": {
-        "shopee": "",
-        "tiktok": "https://vt.tiktok.com/ZSHs48M25tyXJ-fIjIR/",
-        "lazada": "",
-        "other": ""
-      }
-    },
-    {
       "title": "Orbitkey Desk Mat",
       "category": ["mousepad","deskmat"],
       "brand": "orbitkey",
@@ -729,20 +715,6 @@
       }
     },
     {
-      "title": "1HORA AUT202",
-      "category": ["headphone"],
-      "brand": "",
-      "img": "assets/products/1hora-aut202.png",
-      "description": "",
-      "code": "",
-      "links": {
-        "shopee": "",
-        "tiktok": "https://vt.tiktok.com/ZSUeeVr8M/",
-        "lazada": "",
-        "other": ""
-      }
-    },
-    {
       "title": "CORSAIR HEADSET HS80 WIRELESS",
       "category": ["headphone"],
       "brand": "",
@@ -757,34 +729,6 @@
       }
     },
     {
-      "title": "SADES 703",
-      "category": ["headphone"],
-      "brand": "",
-      "img": "assets/products/sades-703.png",
-      "description": "",
-      "code": "",
-      "links": {
-        "shopee": "https://s.shopee.co.th/5L1n0TNnl8",
-        "tiktok": "",
-        "lazada": "",
-        "other": ""
-      }
-    },
-    {
-      "title": "iSuper Sound Pro Air",
-      "category": ["headphone"],
-      "brand": "",
-      "img": "assets/products/isuper-soundpro-air.png",
-      "description": "",
-      "code": "",
-      "links": {
-        "shopee": "",
-        "tiktok": "https://vt.tiktok.com/ZSHGa5stNWe62-0Ex4L/",
-        "lazada": "",
-        "other": ""
-      }
-    },
-    {
       "title": "Soundcore AeroClip",
       "category": ["headphone"],
       "brand": "",
@@ -794,6 +738,35 @@
       "links": {
         "shopee": "",
         "tiktok": "https://vt.tiktok.com/ZSDT1V1P4/",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "Torras - Ostand Q3 Air",
+      "category": ["phone accessories"],
+      "brand": "torras",
+      "img": "assets/products/torras-ostand-q3-air.png",
+      "description": "iPhone Case",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/4LBpb9gqgd",
+        "tiktok": "https://vt.tiktok.com/ZSHE1nwr55Wu7-T4JGv/",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
+      "title": "Qubii duo",
+      "category": ["phone accessories"],
+      "brand": "maktar",
+      "img": "assets/products/maktar-qubii-duo.png",
+      "tag": " ",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "",
+        "tiktok": "https://vt.tiktok.com/ZSHcBScmJqxfd-jF6uH/",
         "lazada": "",
         "other": ""
       }
