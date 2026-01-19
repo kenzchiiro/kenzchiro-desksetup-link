@@ -34,5 +34,9 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         protocol: ftp
         server-dir: /public_html/
-        local-dir: ./dist/
+        local-dir: dist/
         dangerous-clean-slate: true
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
