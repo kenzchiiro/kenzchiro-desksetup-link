@@ -1,6 +1,6 @@
 /* === Modal Base === */
 .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;padding:20px;z-index:60;animation:fadeIn .25s ease-out}
-.modal{display:flex;flex-direction:column;max-width:1080px;width:100%;height:660px;max-height:90vh;background:#fff;border-radius:16px;box-shadow:0 8px 30px rgba(10,10,20,.15);overflow:hidden;position:relative;animation:slideUp .35s cubic-bezier(0.16, 1, 0.3, 1)}
+.modal{display:flex;flex-direction:column;max-width:1080px;width:100%;height:660px;max-height:90vh;background:#fff;border-radius:12px;box-shadow:0 8px 30px rgba(10,10,20,.15);overflow:hidden;position:relative;animation:slideUp .35s cubic-bezier(0.16, 1, 0.3, 1)}
 .modal::before{content:'';position:absolute;top:0;left:0;right:0;height:60px;background:#fff;z-index:5}
 
 /* === Animations === */
@@ -71,7 +71,7 @@
 /* === Responsive === */
 @media (max-width:768px){
   .modal-backdrop{padding:0;align-items:flex-end}
-  .modal{max-width:100%;width:100%;height:90vh;max-height:90vh;border-radius:20px 20px 0 0}
+  .modal{max-width:100%;width:100%;height:90vh;max-height:90vh;border-radius:12px 12px 0 0}
   .modal-content{grid-template-columns:1fr;grid-template-rows:auto 1fr;height:calc(100% - 60px);margin-top:60px;padding:0;overflow-y:auto;overflow-x:hidden}
   .modal-image-wrapper{width:100%;height:auto;border-radius:0;flex-shrink:0;padding:0 20px 20px 20px;background:#fff}
   .modal-image{width:100%;height:auto;max-height:50vh;object-fit:contain;border-radius:12px;display:block}
@@ -83,9 +83,9 @@
   .channel-grid{gap:12px}
   .ch-icon{width:48px;height:48px}
   .modal-group{display:flex;flex-direction:column;height:calc(100% - 60px);margin-top:60px;padding:0;overflow-y:auto;overflow-x:hidden}
-  .modal-group-left{width:100%;aspect-ratio:1/1;flex-shrink:0;padding:20px 20px 0 20px;background:#fff;display:flex;align-items:center;justify-content:center;box-sizing:border-box;overflow:hidden}
+  .modal-group-left{width:100%;aspect-ratio:1/1;flex-shrink:0;padding:0 20px 0 20px;background:#fff;display:flex;align-items:center;justify-content:center;box-sizing:border-box;overflow:hidden}
   .modal-group-image-wrapper{width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:0;box-sizing:border-box}
-  .modal-group-image{width:100%;height:100%;border-radius:20px;display:block}
+  .modal-group-image{width:100%;height:100%;border-radius:12px;display:block}
   .modal-group-right{width:100%;flex-shrink:0;background:#fff}
   .modal-group .modal-body{padding:20px;overflow-y:visible;padding-top:20px}
   .group-items-list{gap:8px}
