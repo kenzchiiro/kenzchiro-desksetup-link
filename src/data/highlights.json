@@ -1,6 +1,21 @@
 {
   "highlights": [
     {
+      "title": "NUBWO - NBCO-01 Gaming Chair",
+      "category": ["chair"],
+      "brand": "NUBWO",
+      "img": "assets/products/nubwo-nbco-01.png",
+      "tag": "new",
+      "description": "Premium Ergonomic Gaming Chair | PU Leather | 4D Adjustable Armrests | Height Adjustable Lumbar Support | 180° Reclining Backrest | Class 4 Gas Lift | 360° Swivel | Heavy-Duty Metal Frame | Memory Foam Cushion",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/3fxY3Jmq7m",
+        "tiktok": "",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
       "title": "Reptilian KX78 HE",
       "category": ["keyboard"],
       "brand": "Saru Space",
@@ -36,7 +51,7 @@
       "brand": "PC Build",
       "img": "assets/pc/build.png",
       "tag": "PC Build",
-      "description": "Monitor : MSI MAG 274QRFW - 27\" IPS 2K 180Hz\nCase: Formd T1 v2.1\nMainboard: Aorus X870i Pro Ice\nCPU: AMD Ryzen 7800X3D\nRAM: 16GB Team DDR5 5600MHz (x2)\nGPU: RTX 4070 super\nSSD: 1TB m.2 KINSTON KC3000\nPSU: Cooler Master SFX 850W\nCPU Cooler: Master Liquid Atmos 240",
+      "description": "Monitor : MSI MAG 274QRFW - 27\" IPS 2K 180Hz\nCase: Formd T1 v2.1\nMainboard: Aorus X870i Pro Ice\nCPU: AMD Ryzen 7800X3D\nRAM: 16GB Team DDR5 5600MHz (x2)\nGPU: RTX 4070 super\nSSD: 1TB m.2 KINSTON KC3000\nPSU: Cooler Master SFX 850W\nCPU Cooler: Master Liquid Atmos ii 240 (White)",
       "code": "",
       "group_items": [
         {
