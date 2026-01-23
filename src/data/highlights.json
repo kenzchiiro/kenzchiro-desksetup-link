@@ -1,17 +1,17 @@
 {
   "highlights": [
     {
-      "title": "NUBWO - NBCO-01 Gaming Chair",
-      "category": ["chair"],
-      "brand": "NUBWO",
-      "img": "assets/products/nubwo-nbco-01.png",
+      "title": "Sillicons - Ultra-Wide LED Desk Lamp V2",
+      "category": ["setup","light"],
+      "brand": "SILLICONS STUDIO",
+      "img": "assets/products/sillicons-desk-lamp.png",
       "tag": "new",
-      "description": "Premium Ergonomic Gaming Chair | PU Leather | 4D Adjustable Armrests | Height Adjustable Lumbar Support | 180° Reclining Backrest | Class 4 Gas Lift | 360° Swivel | Heavy-Duty Metal Frame | Memory Foam Cushion",
+      "description": "Ultra-Wide LED Desk Lamp V2 | Wide Lighting Coverage | 4-Color Temperature Modes | 5 Brightness Levels | Touch & Remote Control | Sleek Modern Aesthetic",
       "code": "",
       "links": {
-        "shopee": "https://s.shopee.co.th/3fxY3Jmq7m",
+        "shopee": "https://s.shopee.co.th/9Kc1XQm17G",
         "tiktok": "",
-        "lazada": "",
+        "lazada": "https://s.lazada.co.th/s.ZYffBJ",
         "other": ""
       }
     },
@@ -27,21 +27,6 @@
         "shopee": "https://s.shopee.co.th/806LteAKoG",
         "tiktok": "",
         "lazada": "",
-        "other": ""
-      }
-    },
-    {
-      "title": "Ergonoz - Pyroz",
-      "category": ["setup"],
-      "brand": "ergonoz",
-      "img": "assets/products/ergonoz-pyroz.jpg",
-      "tag": "new",
-      "description": "Ergonoz Monitor Arm | 17\"-32\" | 2-9 kg | VESA 75x75mm / 100x100mm | Machanical Spring | Cable Management",
-      "code": "",
-      "links": {
-        "shopee": "https://s.shopee.co.th/9pY054fbTY",
-        "tiktok": "https://vt.tiktok.com/ZSHoJYDy5VL2T-rjnVP/",
-        "lazada": "https://s.lazada.co.th/s.ZbE5nc",
         "other": ""
       }
     },
