@@ -2,6 +2,7 @@ import React from 'react'
 import './Header.css'
 import contactsData from '../data/contacts.json'
 import profileData from '../data/profile.json'
+import { trackSocialLinkClick, trackContactLinkClick } from '../utils/umami'
 
 export default function Header() {
   const contacts = contactsData.contacts
@@ -29,7 +30,15 @@ export default function Header() {
             <p className="email">{profile.bio}</p>
             <div className="socials" aria-label="social links">
               {profile.socials.map((social) => (
-                <a key={social.id} className="social" href={social.url} aria-label={social.ariaLabel} target="_blank" rel="noopener noreferrer">
+                <a 
+                  key={social.id} 
+                  className="social" 
+                  href={social.url} 
+                  aria-label={social.ariaLabel} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  onClick={() => trackSocialLinkClick(social.name, social.url)}
+                >
                   <img src={social.icon} alt={social.name} className="social-icon" loading="lazy" />
                 </a>
               ))}
@@ -40,7 +49,15 @@ export default function Header() {
 
       <div className="contact-cards">
         {contacts.map((contact) => (
-          <a key={contact.id} className="contact-card" href={contact.url} role="button" target="_blank" rel="noopener noreferrer">
+          <a 
+            key={contact.id} 
+            className="contact-card" 
+            href={contact.url} 
+            role="button" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            onClick={() => trackContactLinkClick(contact.title, contact.url)}
+          >
             <div className="contact-icon">
               <img src={contact.icon} alt={contact.title} loading="lazy" />
             </div>
