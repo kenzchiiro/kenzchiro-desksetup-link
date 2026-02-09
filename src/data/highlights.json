@@ -1,6 +1,21 @@
 {
   "highlights": [
     {
+      "title": "PISEN Cozy OrbitDock 120W",
+      "category": ["gadget","charger"],
+      "brand": "PISEN",
+      "img": "assets/products/pisen-orbitdock-120w.png",
+      "tag": "new",
+      "description": "120W GaN Charger | 3x USB-C & 1x USB-A | Minimal Design | 4in1 Charging | GaN Tech",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/3qHVzd4Aey",
+        "tiktok": "https://vt.tiktok.com/ZS9JkAGgraGF8-h6ziF/",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
       "title": "HUAWEI - eKit FG736",
       "category": ["router"],
       "brand": "HUAWEI",
