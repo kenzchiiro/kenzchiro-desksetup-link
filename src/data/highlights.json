@@ -1,6 +1,21 @@
 {
   "highlights": [
     {
+      "title": "NuPhy KICK75",
+      "category": ["keyboard"],
+      "brand": "NuPhy",
+      "img": "assets/products/nuphy-kick75.png",
+      "tag": "new",
+      "description": "75% Hybrid Switch Design | Hot-Swappable | 1000Hz Polling Rate | BT & 2.4G for 4 Devices | Spherical PBT Keycaps | Smart Knob Control | Vibrant RGB | Soft-Touch Wrist Rest | NuPhy IO Customization | Retro 8-bit Inspired",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/9AJO1S2Tph",
+        "tiktok": "https://vt.tiktok.com/ZS9eUQ3MpfypQ-jHajP/",
+        "lazada": "",
+        "other": ""
+      }
+    },
+    {
       "title": "CUKTECH - TA1406U Desktop Charger 140W",
       "category": ["gadget","charger"],
       "brand": "CUKTECH",
@@ -41,21 +56,6 @@
       "links": {
         "shopee": "https://s.shopee.co.th/3qHVzd4Aey",
         "tiktok": "https://vt.tiktok.com/ZS9JkAGgraGF8-h6ziF/",
-        "lazada": "",
-        "other": ""
-      }
-    },
-    {
-      "title": "HUAWEI - eKit FG736",
-      "category": ["router"],
-      "brand": "HUAWEI",
-      "img": "assets/products/huawei-ekit-fg736.png",
-      "tag": "new",
-      "description": "Wi-Fi 7 dual-band ONT | Ultra-gigabit speeds | Mesh support | 32 devices | Auto LAN/WAN | One-click pairing.",
-      "code": "",
-      "links": {
-        "shopee": "https://s.shopee.co.th/1BE4PRojgn?share_channel_code=6",
-        "tiktok": "https://vt.tiktok.com/ZSHv31FhXDU8G-IlAYy",
         "lazada": "",
         "other": ""
       }
