@@ -1,5 +1,20 @@
 {
   "highlights": [
+      {
+      "title": "LOGA GARUDA 2",
+      "category": ["mouse"],
+      "brand": "LOGA",
+      "img": "assets/products/loga-garuda-2.png",
+      "tag": "new",
+      "description": "",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/60MeM11a0k",
+        "tiktok": "https://vt.tiktok.com/ZS9dkcKsAjTB8-vCPZU/",
+        "lazada": "https://s.lazada.co.th/s.ZdbeFG",
+        "other": ""
+      }
+    },
     {
       "title": "NuPhy KICK75",
       "category": ["keyboard"],
@@ -16,21 +31,6 @@
       }
     },
     {
-      "title": "CUKTECH - TA1406U Desktop Charger 140W",
-      "category": ["gadget","charger"],
-      "brand": "CUKTECH",
-      "img": "assets/products/cuktech-ta1406u.png",
-      "tag": "new",
-      "description": "6-in-1 Charging Station | 140W Max | 2x Wireless Pads | 2x USB-C & 1x USB-A & 1x USB-C Cable | TFT Display | ADC 2.0 | GaN Tech",
-      "code": "",
-      "links": {
-        "shopee": "https://s.shopee.co.th/8AQkklc85l",
-        "tiktok": "https://vt.tiktok.com/ZS9eRbYNydbvT-VKt2X/",
-        "lazada": "https://s.lazada.co.th/s.Z2ku4I",
-        "other": ""
-      }
-    },
-    {
       "title": "Sillicons - Ultra-Wide LED Desk Lamp V2",
       "category": ["setup","light"],
       "brand": "SILLICONS STUDIO",
@@ -42,21 +42,6 @@
         "shopee": "https://s.shopee.co.th/9Kc1XQm17G",
         "tiktok": "",
         "lazada": "https://s.lazada.co.th/s.ZYffBJ",
-        "other": ""
-      }
-    },
-    {
-      "title": "PISEN Cozy OrbitDock 120W",
-      "category": ["gadget","charger"],
-      "brand": "PISEN",
-      "img": "assets/products/pisen-orbitdock-120w.png",
-      "tag": "new",
-      "description": "120W GaN Charger | 3x USB-C & 1x USB-A | Minimal Design | 4in1 Charging | GaN Tech",
-      "code": "",
-      "links": {
-        "shopee": "https://s.shopee.co.th/3qHVzd4Aey",
-        "tiktok": "https://vt.tiktok.com/ZS9JkAGgraGF8-h6ziF/",
-        "lazada": "",
         "other": ""
       }
     },

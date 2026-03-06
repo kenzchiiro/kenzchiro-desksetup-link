@@ -147,20 +147,6 @@
       }
     },
     {
-      "title": "Saru Space - Reptilian KX78 HE",
-      "category": ["keyboard"],
-      "brand": "Saru Space",
-      "img": "assets/products/saru-kx78he.jpg",
-      "description": "Gaming Magnetic Keyboard | Compact 75%| Hot-Swappable | Hall Effect | 8K Polling Rate | Rapid trigger 0.01mm | Tri-mode Connection",
-      "code": "",
-      "links": {
-        "shopee": "https://s.shopee.co.th/806LteAKoG",
-        "tiktok": "",
-        "lazada": "",
-        "other": ""
-      }
-    },
-    {
       "title": "Womier ERA75",
       "category": ["keyboard"],
       "brand": "womier",
@@ -172,20 +158,6 @@
         "tiktok": "",
         "lazada": "",
         "other": "https://womierkeyboard.com/products/womier-era75?sca_ref=10149033.MaOc1663RR"
-      }
-    },
-    {
-      "title": "Ergonoz KB01",
-      "category": ["keyboard"],
-      "brand": "ergonoz",
-      "img": "assets/products/ergonoz-kb01.png",
-      "description": "Ergonoz Keyboard Kb01 Is a 2-System Wireless Keyboard That Supports Both 2.4Ghz and Bluetooth.",
-      "code": "",
-      "links": {
-        "shopee": "https://s.shopee.co.th/7KpG6XQ4KR",
-        "tiktok": "https://vt.tiktok.com/ZSHE18R4VYk5S-03YDL/",
-        "lazada": "https://s.lazada.co.th/s.ZbjyUb",
-        "other": ""
       }
     },
     {
@@ -244,17 +216,17 @@
         "other": ""
       }
     },
-    {
-      "title": "RK S98",
-      "category": ["keyboard"],
-      "brand": "royalkludge",
-      "img": "assets/products/royalkludge-s98.png",
+        {
+      "title": "LOGA GARUDA 2",
+      "category": ["mouse"],
+      "brand": "LOGA",
+      "img": "assets/products/loga-garuda-2.png",
       "description": "",
       "code": "",
       "links": {
-        "shopee": "https://s.shopee.co.th/4Ap6W5GJKJ",
-        "tiktok": "",
-        "lazada": "",
+        "shopee": "https://s.shopee.co.th/60MeM11a0k",
+        "tiktok": "https://vt.tiktok.com/ZS9dkcKsAjTB8-vCPZU/",
+        "lazada": "https://s.lazada.co.th/s.ZdbeFG",
         "other": ""
       }
     },
@@ -281,20 +253,6 @@
       "code": "",
       "links": {
         "shopee": "https://s.shopee.co.th/LeDhg77JE",
-        "tiktok": "",
-        "lazada": "",
-        "other": ""
-      }
-    },
-    {
-      "title": "Logitech MX Master 3",
-      "category": ["mouse"],
-      "brand": "logitech",
-      "img": "assets/products/logitech-mx-master-3.png",
-      "description": "",
-      "code": "",
-      "links": {
-        "shopee": "https://s.shopee.co.th/6VHHImzk3m",
         "tiktok": "",
         "lazada": "",
         "other": ""
@@ -385,15 +343,31 @@
       }
     },
     {
-      "title": "Vinko V200",
-      "category": ["gadgets", "powerbank"],
-      "brand": "vinko",
-      "img": "assets/products/vinko-v200.png",
-      "description": "Power Bank 130W",
+      "title": "CUKTECH - TA1406U Desktop Charger 140W",
+      "category": ["gadgets","charger"],
+      "brand": "CUKTECH",
+      "img": "assets/products/cuktech-ta1406u.png",
+      "tag": "new",
+      "description": "6-in-1 Charging Station | 140W Max | 2x Wireless Pads | 2x USB-C & 1x USB-A & 1x USB-C Cable | TFT Display | ADC 2.0 | GaN Tech",
       "code": "",
       "links": {
-        "shopee": "",
-        "tiktok": "https://vt.tiktok.com/ZSH3mKPRuD33E-BH1Wv/",
+        "shopee": "https://s.shopee.co.th/8AQkklc85l",
+        "tiktok": "https://vt.tiktok.com/ZS9eRbYNydbvT-VKt2X/",
+        "lazada": "https://s.lazada.co.th/s.Z2ku4I",
+        "other": ""
+      }
+    },
+    {
+      "title": "PISEN Cozy OrbitDock 120W",
+      "category": ["gadget","charger"],
+      "brand": "PISEN",
+      "img": "assets/products/pisen-orbitdock-120w.png",
+      "tag": "new",
+      "description": "120W GaN Charger | 3x USB-C & 1x USB-A | Minimal Design | 4in1 Charging | GaN Tech",
+      "code": "",
+      "links": {
+        "shopee": "https://s.shopee.co.th/3qHVzd4Aey",
+        "tiktok": "https://vt.tiktok.com/ZS9JkAGgraGF8-h6ziF/",
         "lazada": "",
         "other": ""
       }
@@ -512,20 +486,6 @@
       }
     },
     {
-      "title": "Xiaomi Monitor LightBar",
-      "category": ["setup"],
-      "brand": "",
-      "img": "assets/products/xiaomi-monitor-lightbar.png",
-      "description": "",
-      "code": "",
-      "links": {
-        "shopee": "https://s.shopee.co.th/9ABiBze4cD",
-        "tiktok": "",
-        "lazada": "",
-        "other": ""
-      }
-    },
-    {
       "title": "Table Bewell",
       "category": ["setup"],
       "brand": "",
@@ -562,20 +522,6 @@
       "code": "",
       "links": {
         "shopee": "https://s.shopee.co.th/8UolJeS6PD",
-        "tiktok": "",
-        "lazada": "",
-        "other": ""
-      }
-    },
-    {
-      "title": "Picture frame PS2 controller",
-      "category": ["setup"],
-      "brand": "",
-      "img": "assets/products/picture-frame-ps2-controller.png",
-      "description": "",
-      "code": "",
-      "links": {
-        "shopee": "https://s.shopee.co.th/9UpN1Ce6AG",
         "tiktok": "",
         "lazada": "",
         "other": ""
@@ -624,34 +570,6 @@
       }
     },
     {
-      "title": "Maono dm40",
-      "category": ["microphone"],
-      "brand": "",
-      "img": "assets/products/maono-dm40.png",
-      "description": "",
-      "code": "",
-      "links": {
-        "shopee": "https://s.shopee.co.th/4q3eEpaygV",
-        "tiktok": "",
-        "lazada": "",
-        "other": ""
-      }
-    },
-    {
-      "title": "Comica Ejoy Uni Pro",
-      "category": ["microphone"],
-      "brand": "",
-      "img": "assets/products/comica-ejoy-uni-pro.png",
-      "description": "",
-      "code": "",
-      "links": {
-        "shopee": "https://s.shopee.co.th/AUj74HtRdO",
-        "tiktok": "",
-        "lazada": "",
-        "other": ""
-      }
-    },
-    {
       "title": "Boya Magic Mic 4 in 1",
       "category": ["microphone"],
       "brand": "",
@@ -689,20 +607,6 @@
       "links": {
         "shopee": "",
         "tiktok": "https://vt.tiktok.com/ZSDcMJcCB/",
-        "lazada": "",
-        "other": ""
-      }
-    },
-    {
-      "title": "Kanto Ora",
-      "category": ["headphone"],
-      "brand": "",
-      "img": "assets/products/kanto-ora.png",
-      "description": "",
-      "code": "",
-      "links": {
-        "shopee": "",
-        "tiktok": "https://vt.tiktok.com/ZSHWEwtKY8JpS-CC7qa/",
         "lazada": "",
         "other": ""
       }
