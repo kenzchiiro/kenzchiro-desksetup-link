@@ -1,16 +1,15 @@
 import React, { useMemo, useState } from 'react'
 import './Contents.css'
-import itemsData from '../data/items.json'
+import { useItems } from '../hooks/useDirectusData'
 import Modal from './Modal'
 
 export default function Contents() {
+  const { data: ITEMS, loading } = useItems()
   const [query, setQuery] = useState('')
   const [active, setActive] = useState('all')
   const [modalOpen, setModalOpen] = useState(false)
   const [modalItem, setModalItem] = useState(null)
   const [copied, setCopied] = useState(false)
-
-  const ITEMS = itemsData.items
 
   const copyCode = async (code) => {
     try {
@@ -36,34 +35,41 @@ export default function Contents() {
     ITEMS.forEach((i) => {
       if (Array.isArray(i.category)) {
         allCategories.push(...i.category)
-      } else {
+      } else if (i.category) {
         allCategories.push(i.category)
       }
     })
     const set = new Set(allCategories)
     const sortedCategories = Array.from(set).sort()
     return ['all', ...sortedCategories]
-  }, [])
+  }, [ITEMS])
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase()
     return ITEMS.filter((it) => {
-      // Check category filter
       if (active !== 'all') {
-        const itemCategories = Array.isArray(it.category) ? it.category : [it.category]
+        const itemCategories = Array.isArray(it.category)
+          ? it.category
+          : [it.category]
         if (!itemCategories.includes(active)) return false
       }
-      // Check search query
       if (!q) return true
-      const categoryText = Array.isArray(it.category) ? it.category.join(' ') : it.category
-      return it.title.toLowerCase().includes(q) || categoryText.toLowerCase().includes(q)
+      const categoryText = Array.isArray(it.category)
+        ? it.category.join(' ')
+        : it.category
+      return (
+        it.title.toLowerCase().includes(q) ||
+        categoryText.toLowerCase().includes(q)
+      )
     })
-  }, [query, active])
+  }, [query, active, ITEMS])
 
   const groupedByCategory = useMemo(() => {
     const groups = {}
     filtered.forEach((item) => {
-      const firstCategory = Array.isArray(item.category) ? item.category[0] : item.category
+      const firstCategory = Array.isArray(item.category)
+        ? item.category[0]
+        : item.category
       if (!groups[firstCategory]) {
         groups[firstCategory] = []
       }
@@ -76,8 +82,21 @@ export default function Contents() {
     <section className="contents-root">
       <div className="contents-controls">
         <div className="search-wrapper">
-          <svg className="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="6"/><path d="M21 21l-4.3-4.3"/></svg>
-          <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search" />
+          <svg
+            className="icon-search"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
+            <circle cx="11" cy="11" r="6" />
+            <path d="M21 21l-4.3-4.3" />
+          </svg>
+          <input
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Search"
+          />
         </div>
 
         <div className="chips">
@@ -93,28 +112,50 @@ export default function Contents() {
         </div>
       </div>
 
-      <div className="category-sections">
-        {Object.entries(groupedByCategory).map(([category, items]) => (
-          <div key={category} className="category-section">
-            <h2 className="category-title">{category}</h2>
-            <div className="grid">
-              {items.map((item, index) => (
-                <article key={`${category}-${index}`} className="card" onClick={() => { setModalItem(item); setModalOpen(true) }}>
-                  <div className="card-media">
-                    <img src={item.img} alt={item.title} loading="lazy" />
-                  </div>
-                </article>
-              ))}
+      {loading ? (
+        <div className="category-sections">
+          {[...Array(3)].map((_, i) => (
+            <div key={i} className="category-section">
+              <div className="category-title skeleton" style={{ width: 120, height: 24, borderRadius: 6 }} />
+              <div className="grid">
+                {[...Array(4)].map((_, j) => (
+                  <article key={j} className="card skeleton" />
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      ) : (
+        <div className="category-sections">
+          {Object.entries(groupedByCategory).map(([category, items]) => (
+            <div key={category} className="category-section">
+              <h2 className="category-title">{category}</h2>
+              <div className="grid">
+                {items.map((item, index) => (
+                  <article
+                    key={item.id ?? `${category}-${index}`}
+                    className="card"
+                    onClick={() => {
+                      setModalItem(item)
+                      setModalOpen(true)
+                    }}
+                  >
+                    <div className="card-media">
+                      <img src={item.img} alt={item.title} loading="lazy" />
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
 
-      <Modal 
-        open={modalOpen} 
-        onClose={() => setModalOpen(false)} 
-        item={modalItem} 
-        copied={copied} 
+      <Modal
+        open={modalOpen}
+        onClose={() => setModalOpen(false)}
+        item={modalItem}
+        copied={copied}
         onCopy={copyCode}
       />
     </section>

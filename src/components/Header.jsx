@@ -1,16 +1,34 @@
 import React from 'react'
 import './Header.css'
-import contactsData from '../data/contacts.json'
-import profileData from '../data/profile.json'
+import { useProfile, useContacts } from '../hooks/useDirectusData'
 import { trackSocialLinkClick, trackContactLinkClick } from '../utils/umami'
 
 export default function Header() {
-  const contacts = contactsData.contacts
-  const profile = profileData
+  const { data: profile, loading: profileLoading } = useProfile()
+  const { data: contacts, loading: contactsLoading } = useContacts()
+
+  if (profileLoading || contactsLoading) {
+    return (
+      <header className="profile-header">
+        <div className="cover" aria-hidden="true" />
+        <div className="header-content" style={{ minHeight: 120 }} />
+      </header>
+    )
+  }
+
+  if (!profile) return null
 
   return (
     <header className="profile-header">
-      <div className="cover" aria-hidden="true" style={{backgroundImage:`url(${profile.cover})`, backgroundSize: 'cover', backgroundPosition: 'center'}}></div>
+      <div
+        className="cover"
+        aria-hidden="true"
+        style={{
+          backgroundImage: `url(${profile.cover})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      />
 
       <div className="header-content">
         <div className="avatar-column">
@@ -30,16 +48,21 @@ export default function Header() {
             <p className="email">{profile.bio}</p>
             <div className="socials" aria-label="social links">
               {profile.socials.map((social) => (
-                <a 
-                  key={social.id} 
-                  className="social" 
-                  href={social.url} 
-                  aria-label={social.ariaLabel} 
-                  target="_blank" 
+                <a
+                  key={social.id}
+                  className="social"
+                  href={social.url}
+                  aria-label={social.ariaLabel}
+                  target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => trackSocialLinkClick(social.name, social.url)}
                 >
-                  <img src={social.icon} alt={social.name} className="social-icon" loading="lazy" />
+                  <img
+                    src={social.icon}
+                    alt={social.name}
+                    className="social-icon"
+                    loading="lazy"
+                  />
                 </a>
               ))}
             </div>
@@ -49,12 +72,12 @@ export default function Header() {
 
       <div className="contact-cards">
         {contacts.map((contact) => (
-          <a 
-            key={contact.id} 
-            className="contact-card" 
-            href={contact.url} 
-            role="button" 
-            target="_blank" 
+          <a
+            key={contact.id}
+            className="contact-card"
+            href={contact.url}
+            role="button"
+            target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackContactLinkClick(contact.title, contact.url)}
           >
