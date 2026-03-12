@@ -97,7 +97,7 @@ export function useHighlights() {
       .request(
         readItems(COLLECTIONS.highlights, {
           fields: ['*', 'group_items.*'],
-          sort: ['sort', '-date_created'],
+          sort: ['-date_created'],
           filter: { status: { _eq: 'published' } },
         })
       )
@@ -122,7 +122,7 @@ export function useItems() {
       .request(
         readItems(COLLECTIONS.items, {
           fields: ['*', 'group_items.*'],
-          sort: ['sort', '-date_created'],
+          sort: ['-date_created'],
           limit: -1,
           filter: { status: { _eq: 'published' } },
         })
