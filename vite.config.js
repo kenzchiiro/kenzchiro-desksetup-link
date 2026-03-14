@@ -9,21 +9,11 @@ export default defineConfig(({ mode }) => {
   return {
     base: '/',
     server: {
-      host: true,
+      host: 'localhost',
       port,
-      proxy: {
-        // dev proxy → forward /directus/* ไปยัง Directus จริง
-        // วิธีนี้ทำให้ browser ไม่ต้อง trust cert โดยตรง
-        '/directus': {
-          target: env.VITE_DIRECTUS_URL,
-          changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/directus/, ''),
-          secure: false,
-        },
-      },
     },
     preview: {
-      host: true,
+      host: 'localhost',
       port,
     },
     plugins: [

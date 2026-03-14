@@ -1,7 +1,20 @@
-import React, { useMemo, useState } from 'react'
+import React, { useMemo, useState, useCallback, memo } from 'react'
 import './Contents.css'
 import { useItems } from '../hooks/useDirectusData'
 import Modal from './Modal'
+
+const ItemCard = memo(function ItemCard({ item, category, index, onOpen }) {
+  return (
+    <article
+      className="card"
+      onClick={() => onOpen(item)}
+    >
+      <div className="card-media">
+        <img src={item.img} alt={item.title} loading="lazy" />
+      </div>
+    </article>
+  )
+})
 
 export default function Contents() {
   const { data: ITEMS, loading } = useItems()
@@ -11,7 +24,7 @@ export default function Contents() {
   const [modalItem, setModalItem] = useState(null)
   const [copied, setCopied] = useState(false)
 
-  const copyCode = async (code) => {
+  const copyCode = useCallback(async (code) => {
     try {
       if (navigator.clipboard && navigator.clipboard.writeText) {
         await navigator.clipboard.writeText(code)
@@ -28,7 +41,12 @@ export default function Contents() {
     } catch (e) {
       console.warn('copy failed', e)
     }
-  }
+  }, [])
+
+  const handleOpen = useCallback((item) => {
+    setModalItem(item)
+    setModalOpen(true)
+  }, [])
 
   const categories = useMemo(() => {
     const allCategories = []
@@ -132,18 +150,13 @@ export default function Contents() {
               <h2 className="category-title">{category}</h2>
               <div className="grid">
                 {items.map((item, index) => (
-                  <article
+                  <ItemCard
                     key={item.id ?? `${category}-${index}`}
-                    className="card"
-                    onClick={() => {
-                      setModalItem(item)
-                      setModalOpen(true)
-                    }}
-                  >
-                    <div className="card-media">
-                      <img src={item.img} alt={item.title} loading="lazy" />
-                    </div>
-                  </article>
+                    item={item}
+                    category={category}
+                    index={index}
+                    onOpen={handleOpen}
+                  />
                 ))}
               </div>
             </div>

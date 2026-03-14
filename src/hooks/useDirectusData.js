@@ -1,23 +1,24 @@
 import { useState, useEffect } from 'react'
 import { readItems, readSingleton } from '@directus/sdk'
 import client, { assetUrl } from '../lib/directus'
+import profileJson from '../data/profile.json'
+import contactsJson from '../data/contacts.json'
+import highlightsJson from '../data/highlights.json'
+import itemsJson from '../data/items.json'
 
-// ─── ชื่อ Collection ใน Directus ─────────────────────────────────────────────
 const COLLECTIONS = {
-  profile:    'profile',     // singleton
+  profile:    'profile',
   contacts:   'contacts',
   highlights: 'highlights',
-  items:      'products',    // ชื่อ collection ใน Directus คือ products
+  items:      'products',
 }
 
-// ─── Helper: แปลง item.img / item.icon → URL ─────────────────────────────────
 function mapItemImages(item) {
   if (!item) return item
   return {
     ...item,
     img: item.img ? assetUrl(item.img) : item.img,
     icon: item.icon ? assetUrl(item.icon) : item.icon,
-    // group_items อาจเป็น JSON array หรือ relation array
     group_items: Array.isArray(item.group_items)
       ? item.group_items.map((gi) => ({
           ...gi,
@@ -27,13 +28,17 @@ function mapItemImages(item) {
   }
 }
 
-// ─── useProfile ───────────────────────────────────────────────────────────────
 export function useProfile() {
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
   useEffect(() => {
+    if (import.meta.env.DEV) {
+      setData(profileJson)
+      setLoading(false)
+      return
+    }
     client
       .request(
         readSingleton(COLLECTIONS.profile, {
@@ -45,7 +50,6 @@ export function useProfile() {
           ...res,
           avatar: assetUrl(res.avatar),
           cover: assetUrl(res.cover),
-          // socials อาจเป็น JSON array หรือ relation — รองรับทั้งสอง
           socials: Array.isArray(res.socials)
             ? res.socials.map((s) => ({
                 ...s,
@@ -61,13 +65,17 @@ export function useProfile() {
   return { data, loading, error }
 }
 
-// ─── useContacts ──────────────────────────────────────────────────────────────
 export function useContacts() {
   const [data, setData] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
   useEffect(() => {
+    if (import.meta.env.DEV) {
+      setData(contactsJson.contacts ?? [])
+      setLoading(false)
+      return
+    }
     client
       .request(
         readItems(COLLECTIONS.contacts, {
@@ -86,13 +94,17 @@ export function useContacts() {
   return { data, loading, error }
 }
 
-// ─── useHighlights ────────────────────────────────────────────────────────────
 export function useHighlights() {
   const [data, setData] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
   useEffect(() => {
+    if (import.meta.env.DEV) {
+      setData(highlightsJson.highlights ?? [])
+      setLoading(false)
+      return
+    }
     client
       .request(
         readItems(COLLECTIONS.highlights, {
@@ -111,13 +123,17 @@ export function useHighlights() {
   return { data, loading, error }
 }
 
-// ─── useItems ─────────────────────────────────────────────────────────────────
 export function useItems() {
   const [data, setData] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
   useEffect(() => {
+    if (import.meta.env.DEV) {
+      setData(itemsJson.items ?? [])
+      setLoading(false)
+      return
+    }
     client
       .request(
         readItems(COLLECTIONS.items, {

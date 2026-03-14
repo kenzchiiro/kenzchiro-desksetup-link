@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import './Modal.css'
 import { trackProductView, trackProductLinkClick, trackDiscountCodeCopy } from '../utils/umami'
 
@@ -20,29 +20,28 @@ export default function Modal({ open, onClose, item, copied, onCopy }) {
     }
   }, [open, item])
   
+  const handleBack = useCallback(() => {
+    setSelectedItem(null)
+  }, [])
+
+  const handleItemSelect = useCallback((groupItem) => {
+    setSelectedItem(groupItem)
+  }, [])
+
+  const handleClose = useCallback(() => {
+    setSelectedItem(null)
+    onClose()
+  }, [onClose])
+
+  const trackProductClick = useCallback((itemTitle, category, platform, url, brand) => {
+    trackProductLinkClick(itemTitle, category, platform, url, brand)
+  }, [])
+
   if (!open || !item) return null
 
-  // Check if this is a group item
   const isGroupItem = item.group_items && Array.isArray(item.group_items) && item.group_items.length > 0
   const displayItem = selectedItem || item
   const showingGroupList = isGroupItem && !selectedItem
-
-  const handleBack = () => {
-    setSelectedItem(null)
-  }
-
-  const handleItemSelect = (groupItem) => {
-    setSelectedItem(groupItem)
-  }
-
-  const handleClose = () => {
-    setSelectedItem(null)
-    onClose()
-  }
-
-  const trackProductClick = (itemTitle, category, platform, url, brand) => {
-    trackProductLinkClick(itemTitle, category, platform, url, brand)
-  }
 
   return (
     <div className="modal-backdrop" onClick={handleClose}>
