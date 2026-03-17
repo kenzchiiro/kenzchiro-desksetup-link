@@ -1,6 +1,5 @@
 import React, { useMemo, useState, useCallback, memo } from 'react'
 import './Contents.css'
-import { useItems } from '../hooks/useDirectusData'
 import Modal from './Modal'
 
 const ItemCard = memo(function ItemCard({ item, category, index, onOpen }) {
@@ -16,8 +15,7 @@ const ItemCard = memo(function ItemCard({ item, category, index, onOpen }) {
   )
 })
 
-export default function Contents() {
-  const { data: ITEMS, loading } = useItems()
+export default function Contents({ items: ITEMS = [], loading }) {
   const [query, setQuery] = useState('')
   const [active, setActive] = useState('all')
   const [modalOpen, setModalOpen] = useState(false)
@@ -47,6 +45,8 @@ export default function Contents() {
     setModalItem(item)
     setModalOpen(true)
   }, [])
+
+  const handleClose = useCallback(() => setModalOpen(false), [])
 
   const categories = useMemo(() => {
     const allCategories = []
@@ -95,6 +95,10 @@ export default function Contents() {
     })
     return groups
   }, [filtered])
+
+  const sortedEntries = useMemo(() => {
+    return Object.entries(groupedByCategory).sort(([a], [b]) => a.localeCompare(b))
+  }, [groupedByCategory])
 
   return (
     <section className="contents-root">
@@ -145,7 +149,7 @@ export default function Contents() {
         </div>
       ) : (
         <div className="category-sections">
-          {Object.entries(groupedByCategory).map(([category, items]) => (
+          {sortedEntries.map(([category, items]) => (
             <div key={category} className="category-section">
               <h2 className="category-title">{category}</h2>
               <div className="grid">
@@ -166,7 +170,7 @@ export default function Contents() {
 
       <Modal
         open={modalOpen}
-        onClose={() => setModalOpen(false)}
+        onClose={handleClose}
         item={modalItem}
         copied={copied}
         onCopy={copyCode}

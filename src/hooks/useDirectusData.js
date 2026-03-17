@@ -1,16 +1,12 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { readItems, readSingleton } from '@directus/sdk'
 import client, { assetUrl } from '../lib/directus'
-import profileJson from '../data/profile.json'
-import contactsJson from '../data/contacts.json'
-import highlightsJson from '../data/highlights.json'
-import itemsJson from '../data/items.json'
 
 const COLLECTIONS = {
-  profile:    'profile',
-  contacts:   'contacts',
-  highlights: 'highlights',
-  items:      'products',
+  profile:       'profile',
+  contacts:      'contacts',
+  items:         'products',
+  collaborations: 'collaboration',
 }
 
 function mapItemImages(item) {
@@ -34,11 +30,6 @@ export function useProfile() {
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    if (import.meta.env.DEV) {
-      setData(profileJson)
-      setLoading(false)
-      return
-    }
     client
       .request(
         readSingleton(COLLECTIONS.profile, {
@@ -71,11 +62,6 @@ export function useContacts() {
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    if (import.meta.env.DEV) {
-      setData(contactsJson.contacts ?? [])
-      setLoading(false)
-      return
-    }
     client
       .request(
         readItems(COLLECTIONS.contacts, {
@@ -94,46 +80,12 @@ export function useContacts() {
   return { data, loading, error }
 }
 
-export function useHighlights() {
+export function useProducts() {
   const [data, setData] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    if (import.meta.env.DEV) {
-      setData(highlightsJson.highlights ?? [])
-      setLoading(false)
-      return
-    }
-    client
-      .request(
-        readItems(COLLECTIONS.highlights, {
-          fields: ['*', 'group_items.*'],
-          sort: ['-date_created'],
-          filter: { status: { _eq: 'published' } },
-        })
-      )
-      .then((res) => {
-        setData(res.map(mapItemImages))
-      })
-      .catch(setError)
-      .finally(() => setLoading(false))
-  }, [])
-
-  return { data, loading, error }
-}
-
-export function useItems() {
-  const [data, setData] = useState([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
-
-  useEffect(() => {
-    if (import.meta.env.DEV) {
-      setData(itemsJson.items ?? [])
-      setLoading(false)
-      return
-    }
     client
       .request(
         readItems(COLLECTIONS.items, {
@@ -145,6 +97,43 @@ export function useItems() {
       )
       .then((res) => {
         setData(res.map(mapItemImages))
+      })
+      .catch(setError)
+      .finally(() => setLoading(false))
+  }, [])
+
+  const highlights = useMemo(
+    () =>
+      data
+        .filter((i) => i.highlight)
+        .sort((a, b) => new Date(b.date_updated) - new Date(a.date_updated)),
+    [data]
+  )
+
+  return { data, highlights, loading, error }
+}
+
+export function useCollaborations() {
+  const [data, setData] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+
+  useEffect(() => {
+    client
+      .request(
+        readItems(COLLECTIONS.collaborations, {
+          fields: ['*'],
+          sort: ['sort', '-date_created'],
+          filter: { status: { _eq: 'published' } },
+        })
+      )
+      .then((res) => {
+        setData(
+          res.map((item) => ({
+            ...item,
+            logo: item.logo ? assetUrl(item.logo) : null,
+          }))
+        )
       })
       .catch(setError)
       .finally(() => setLoading(false))

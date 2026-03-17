@@ -11,6 +11,13 @@ export default defineConfig(({ mode }) => {
     server: {
       host: 'localhost',
       port,
+      proxy: {
+        '/__directus': {
+          target: env.VITE_DIRECTUS_URL,
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/__directus/, ''),
+        },
+      },
     },
     preview: {
       host: 'localhost',
