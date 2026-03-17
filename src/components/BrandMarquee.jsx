@@ -17,7 +17,7 @@ export default function BrandMarquee({ brands = [] }) {
 
   return (
     <div className="brand-marquee-wrapper">
-      <span className="brand-label">Worked With</span>
+      <span className="brand-label">Past<br/>Collaborations</span>
       <div className="brand-track-outer">
         <div className="brand-track">
           {brands.map((b) => <BrandItem key={b.name} name={b.name} logo={b.logo} />)}
