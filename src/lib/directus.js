@@ -1,20 +1,20 @@
 import { createDirectus, rest, staticToken } from '@directus/sdk'
 
 const DIRECTUS_TOKEN = import.meta.env.VITE_DIRECTUS_TOKEN
-const DIRECTUS_URL = import.meta.env.VITE_DIRECTUS_URL
+const DIRECTUS_URL = import.meta.env.DEV
+  ? `${window.location.origin}/__directus`
+  : import.meta.env.VITE_DIRECTUS_URL
 
 if (!DIRECTUS_URL && !import.meta.env.DEV) {
   throw new Error('Missing VITE_DIRECTUS_URL for Directus client configuration')
 }
 
-if (!DIRECTUS_TOKEN) {
+if (!DIRECTUS_TOKEN && !import.meta.env.DEV) {
   // Client-side tokens are public by nature; keep this token read-only in Directus.
-  if (!import.meta.env.DEV) {
-    console.warn('VITE_DIRECTUS_TOKEN is missing; requests to protected collections may fail')
-  }
+  console.warn('VITE_DIRECTUS_TOKEN is missing; requests to protected collections may fail')
 }
 
-const client = createDirectus(DIRECTUS_URL || 'http://localhost:8055')
+const client = createDirectus(DIRECTUS_URL)
   .with(DIRECTUS_TOKEN ? staticToken(DIRECTUS_TOKEN) : (directus) => directus)
   .with(rest())
 

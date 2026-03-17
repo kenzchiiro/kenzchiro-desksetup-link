@@ -1,9 +1,8 @@
 import React, { useState, useCallback, memo } from 'react'
 import './Highlight.css'
-import { useHighlights } from '../hooks/useDirectusData'
 import Modal from './Modal'
 
-const HighlightCard = memo(function HighlightCard({ item, index, onOpen }) {
+const HighlightCard = memo(function HighlightCard({ item, onOpen }) {
   return (
     <div
       className="highlight-card"
@@ -36,8 +35,7 @@ const HighlightCard = memo(function HighlightCard({ item, index, onOpen }) {
   )
 })
 
-export default function Highlight() {
-  const { data: highlights, loading } = useHighlights()
+export default function Highlight({ items = [], loading }) {
   const [modalOpen, setModalOpen] = useState(false)
   const [modalItem, setModalItem] = useState(null)
   const [copied, setCopied] = useState(false)
@@ -66,6 +64,8 @@ export default function Highlight() {
     setModalOpen(true)
   }, [])
 
+  const handleClose = useCallback(() => setModalOpen(false), [])
+
   if (loading) {
     return (
       <section className="highlight-section">
@@ -83,11 +83,10 @@ export default function Highlight() {
     <section className="highlight-section">
       <h2 className="highlight-header">Highlight</h2>
       <div className="highlight-grid">
-        {highlights.map((item, index) => (
+        {items.map((item, index) => (
           <HighlightCard
             key={item.id ?? index}
             item={item}
-            index={index}
             onOpen={handleOpen}
           />
         ))}
@@ -95,7 +94,7 @@ export default function Highlight() {
 
       <Modal
         open={modalOpen}
-        onClose={() => setModalOpen(false)}
+        onClose={handleClose}
         item={modalItem}
         copied={copied}
         onCopy={copyCode}

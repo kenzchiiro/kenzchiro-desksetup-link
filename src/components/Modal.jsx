@@ -104,6 +104,7 @@ export default function Modal({ open, onClose, item, copied, onCopy }) {
           <div className="modal-content">
             {displayItem.img && (
               <div className="modal-image-wrapper">
+                <div className="modal-image-blur" style={{ backgroundImage: `url(${displayItem.img})` }} />
                 <img src={displayItem.img} alt={displayItem.title} className="modal-image" loading="lazy" />
                 {(displayItem.brand || displayItem.category) && (
                   <div className="modal-category-overlay">

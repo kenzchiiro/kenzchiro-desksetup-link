@@ -4,7 +4,7 @@
     {
       "name": "dev",
       "runtimeExecutable": "/Users/kenzchiro/.nvm/versions/node/v24.12.0/bin/node",
-      "runtimeArgs": ["node_modules/.bin/vite"],
+      "runtimeArgs": ["/Users/kenzchiro/github/kenzchiro-desksetup-link/node_modules/.bin/vite"],
       "port": 3000
     },
     {
