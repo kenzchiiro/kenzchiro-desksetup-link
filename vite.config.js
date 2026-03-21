@@ -27,5 +27,12 @@ export default defineConfig(({ mode }) => {
       react(),
       tailwindcss(),
     ],
+    build: {
+      target: 'esnext',
+      minify: 'esbuild',
+      rollupOptions: {
+        maxParallelFileOps: 2,
+      },
+    },
   }
 })
